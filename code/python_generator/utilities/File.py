@@ -5,7 +5,7 @@ class File:
     def __init__(self, path):
         self.path = path
         self.ext = path.split(".")[-1]
-        self.content = self.load()
+        self.load()
 
     def load(self):
         match self.ext:
@@ -26,7 +26,8 @@ class File:
         self.content = ""
 
     def load_txt(self):
-        self.content = ""
+        with open(self.path, 'r') as f:
+            self.content = str(f.read())
 
     def load_html(self):
         self.content = ""
@@ -36,3 +37,6 @@ class File:
 
     def __str__(self):
         return self.content
+    
+    def __repr__(self):
+        return str(self.path) + ": \n" + str(self.content) + "\n"

@@ -1,5 +1,43 @@
 # Cognitive-Warmup
 
+I choose to begin work early, so I can enjoy sunlight hours afterwards. However, I encountered an issue - every morning, I'm accosted by co-workers wanting to small talk about the weather and other meaningless topics. I do want to talk to my coworkers in the morning, just not about that. However, when it's time for my reponse, I'm usually tired enough where its challenging to come up with interesting answers - answers to jolt people out of their rhythm and inspire thought provoking conversation. This repo is dedicated to developing a daily tool to warm up your cognitive abilities, speech patterns, and provide a jump-off point for interesting conversation.
+
 This app will produce a "cognitive warmup" according to a cron schedule, likely once every day. Generated content will consist of various questions, possibly including fermi questions, soft-skill probing questions, interview-like questions, questions about documents uploaded to source folder. It will also include some related content to consume, likely scraped from the html sources included in this list, and related to personal documents uploaded.
 
-In the near future, I plan to involve OpenAI's Realtime API for interaction smoothness.
+## Sources of generation (future)
+ - Recent public github updates
+ - Recent posts or status updates from various platforms - X, FB, LinkedIn
+ - Documents uploaded to `source` folder
+  - Shower thoughts
+  - Philisophical questions - perhaps epistemological
+ - Questions referring to recent consumed academic works - likely learned from scanning ones Obsidian Vault
+ - Questions related to works in provided newsletters, or listed websites (LessWrong)
+
+## System - Minimal Working Example (MWE)
+ - Load txt files from `./source` folder
+ - Merge content in a `Content` object
+ - Using `Content` object, generate various desirables
+ - Return generated content to generated folder
+
+## System - Goal
+
+ - Load Stage
+  - Load txt files from `./source` folder
+  - Load Obsidian notes
+  - Load recent news http sources
+  - Load recent github updates
+  - Personal pdf documents
+  - ...
+ - Merge content in a `Content` object
+ - Using `Content` object, generate initial desirables (probing questions)
+ - Send these to OpenAI Realtime communicator
+  - Provide interactive web app and record transcript
+ - After conversation finish, prompt user with retrospective analysis of conversation
+  - Speech improvement, filler words, repetitive words, content compression
+ - Provide user with final "news-like" content for awareness and further prompting for the day
+
+## Configuration
+
+Only the OpenAI key is strictly necessary. Secrets are loaded from environment variables, which must be set with e.g.
+
+`export OPENAI_API_KEY=<INSERT_OPENAI_KEY_HERE>`
