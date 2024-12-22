@@ -18,6 +18,8 @@ pipeline {
                 script {
                     sh """echo $WORKSPACE
                        cd $WORKSPACE/code/python_generator; pwd; ls -alh
+                       echo 'Two directories up:'
+                       ls -alh ../../
                         ./run.sh
                         docker ps"""
                 }
