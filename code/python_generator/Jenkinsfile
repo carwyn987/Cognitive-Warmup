@@ -26,10 +26,10 @@ pipeline {
                         chmod -R 755 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
                         ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config \$WORKSPACE
 
-                        docker run --rm \
-                            --mount src=\$WORKSPACE/source,target=/app/source,type=bind \\
-                            --mount src=\$WORKSPACE/generated,target=/app/output,type=bind \\
-                            --mount src=\$WORKSPACE/config,target=/app/config,type=bind \\
+                        docker run --rm \\
+                            --mount type=bind,src=\$WORKSPACE/source,dst=/app/source \\
+                            --mount type=bind,src=\$WORKSPACE/generated,dst=/app/output \\
+                            --mount type=bind,src=\$WORKSPACE/config,dst=/app/config \\
                             --user ${uid}:${gid} \\
                             python_generator
                         docker ps"""
