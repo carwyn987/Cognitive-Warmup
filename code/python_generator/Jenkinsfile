@@ -34,6 +34,7 @@ pipeline {
                     ls -alh $WORKSPACE/code/python_generator/config
                     ls -alh $WORKSPACE/code/python_generator/source
                     docker run --rm \\
+                        -e "OPENAI_API_KEY=$OPENAI_API_KEY" \
                         --user ${uid}:${gid} \\
                         python_generator
                     docker ps
