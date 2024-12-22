@@ -17,6 +17,7 @@ pipeline {
             steps {
                 script {
                     // Ensure directories exist and have proper permissions
+                    sh "sleep 5"
                     sh """
                         echo "Checking directories in $WORKSPACE"
                         # mkdir -p $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
