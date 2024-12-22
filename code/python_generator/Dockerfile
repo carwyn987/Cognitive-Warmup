@@ -10,6 +10,7 @@ RUN python3.10 -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
+RUN chmod 777 /app
 
 # Command to run the app
 ENTRYPOINT ["python", "main.py", "--config_file=/app/config/tasking.yaml", "/app/source", "/app/output"]
