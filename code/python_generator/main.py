@@ -36,6 +36,10 @@ OpenAI_Controller = OpenAI(secrets.openai)
 for task in config_tasks:
     if config[task]['enabled'] == False:
         continue
+    role = config[task]['role'] if 'role' in config[task] else "system"
+    role_content = config[task]['role_content'] if 'role_content' in config[task] else "You are a helpful assistant."
+    model = config[task]['model'] if 'model' in config[task] else "gpt-4o-mini"
     print(f'Generating content for task: "{task}"')
-    #response = OpenAI_Controller.generate_text(merged_files.content, config[task])
+
+    #response = OpenAI_Controller.text_request(merged_files.content, config[task])
     # Error handling

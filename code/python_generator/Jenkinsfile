@@ -20,6 +20,8 @@ pipeline {
                        cd $WORKSPACE/code/python_generator; pwd; ls -alh
                        echo 'Two directories up:'
                        ls -alh ../../
+                       echo 'Two directories up / config:'
+                       ls -alh ../../config/
                         ./run.sh
                         docker ps"""
                 }
