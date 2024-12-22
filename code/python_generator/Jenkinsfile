@@ -22,7 +22,7 @@ pipeline {
                             -v $WORKSPACE/source:/app/source:ro \\
                             -v $WORKSPACE/generated:/app/output \\
                             -v $WORKSPACE/config:/app/config:ro \\
-                            python_generator:latest
+                            python_generator
                        docker ps"""
                 }
             }
