@@ -21,9 +21,7 @@ pipeline {
                     def gid = sh(script: 'id -g', returnStdout: true).trim()
 
                     // Ensure directories exist and have proper permissions
-                    sh """
-                        cd $WORKSPACE/code/python_generator;
-
+                    sh """ls -alh \$WORKSPACE \$WORKSPACE/code/python_generator
                         docker run --rm \\
                             --mount type=bind,src=\$WORKSPACE/code/python_generator/source,dst=/app/source \\
                             --mount type=bind,src=\$WORKSPACE/code/python_generator/generated,dst=/app/output \\
