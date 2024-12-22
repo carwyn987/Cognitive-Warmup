@@ -14,30 +14,20 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                script {
-                    // Get the current host user ID and group ID
-                    def uid = sh(script: 'id -u', returnStdout: true).trim()
-                    def gid = sh(script: 'id -g', returnStdout: true).trim()
-
-                    // Ensure directories exist and have proper permissions
-                    sh """
-                        echo "Checking directories in $WORKSPACE"
-                        chmod -R 755 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
-                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config \$WORKSPACE
-
-                        docker run --rm \
-                            -e "OPENAI_API_KEY=\$OPENAI_API_KEY" \\
-                            -e "YOUTUBE_API_KEY=\$YOUTUBE_API_KEY" \\
-                            --mount src=\$WORKSPACE/source,target=/app/source,type=bind \\
-                            --mount src=\$WORKSPACE/generated,target=/app/output,type=bind \\
-                            --mount src=\$WORKSPACE/config,target=/app/config,type=bind \\
-                            --user ${uid}:${gid} \\
-                            python_generator
-                        docker ps"""
+            agent {
+                docker {
+                    image 'python_generator' // Replace with your specific image
+                    args """
+                        -v $WORKSPACE/source:/app/source:ro \
+                        -v $WORKSPACE/generated:/app/output \
+                        -v $WORKSPACE/config:/app/config:ro \
+                        -e OPENAI_API_KEY=$OPENAI_API_KEY \
+                        -e YOUTUBE_API_KEY=$YOUTUBE_API_KEY \
+                        --user $(id -u):$(id -g)
+                    """
+                    reuseNode true
                 }
             }
-        }
     }
     post {
         always {
