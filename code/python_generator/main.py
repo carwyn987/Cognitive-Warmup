@@ -7,7 +7,7 @@ import argparse
 from api.OpenAI import OpenAI
 from utilities.File import File, MergedFiles
 from utilities.LoadSecrets import LoadSecrets
-from utilities.Prompt import Prompt
+from utilities.Prompt import PromptGenerator
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Generate cognitive warmup.')
@@ -42,5 +42,7 @@ for task in config_tasks:
     model = config[task]['model'] if 'model' in config[task] else "gpt-4o-mini"
     print(f'Generating content for task: "{task}"')
 
-    #response = OpenAI_Controller.text_request(merged_files.content, config[task])
-    # Error handling
+    prompt = PromptGenerator("combine_with_context", config[task]['command'], merged_files.content).get_prompt()
+    print("PROMPT: ", prompt)
+    response = OpenAI_Controller.text_request(merged_files.content, config[task])
+    print("RESPONSE: ", response)

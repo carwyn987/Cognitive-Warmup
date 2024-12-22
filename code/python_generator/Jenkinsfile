@@ -24,20 +24,9 @@ pipeline {
                 def gid = sh(script: 'id -g', returnStdout: true).trim()
 
                 // Ensure directories exist and have proper permissions
-                sh """chmod -R 777 $WORKSPACE/code/python_generator/output
-                    chmod -R 777 $WORKSPACE/code/python_generator/output/output.txt
-                    chmod -R 777 $WORKSPACE/code/python_generator/source
-                    chmod -R 777 $WORKSPACE/code/python_generator/config
-                    chmod -R 777 $WORKSPACE/code/python_generator/config/tasking.yaml
-                
-                    ls -alh $WORKSPACE $WORKSPACE/code/python_generator
-                    ls -alh $WORKSPACE/code/python_generator/config
-                    ls -alh $WORKSPACE/code/python_generator/source
-                    """
+                sh "chmod -R 777 $WORKSPACE/code/python_generator"
                 sh 'docker run --rm -e "OPENAI_API_KEY=\$OPENAI_API_KEY" --user ${uid}:${gid} python_generator'
-                sh """docker ps
-                    cat $WORKSPACE/code/python_generator/output/output.txt
-                    """
+                sh "docker ps; cat $WORKSPACE/code/python_generator/output/output.txt"
                 }
             }
         }

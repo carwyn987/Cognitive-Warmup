@@ -1,4 +1,4 @@
-class Prompt:
+class PromptGenerator:
     def __init__(self, generator_name, command, content):
         """
         Initialize with the generator name (combiner), command, and content.
