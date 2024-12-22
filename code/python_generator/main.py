@@ -9,19 +9,12 @@ from utilities.File import File, MergedFiles
 from utilities.LoadSecrets import LoadSecrets
 from utilities.Prompt import Prompt
 
-time.sleep(5)
-
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Generate cognitive warmup.')
 parser.add_argument('source_dir', type=str, help='Path to the input directory.')
 parser.add_argument('output_dir', type=str, help='Path to the output directory.')
 parser.add_argument('--config_file', type=str, default="../../config/tasking.yaml", help='Path to the config file.')
 args = parser.parse_args()
-
-with open(args.output_dir + "/output.txt", "w") as f:
-    f.write("Hello, World!")
-
-exit(0)
 
 def print_dir_tree(start_path, indent=""):
     for item in os.listdir(start_path):
