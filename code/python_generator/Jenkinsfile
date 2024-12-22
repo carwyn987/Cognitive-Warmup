@@ -32,7 +32,9 @@ pipeline {
                             --mount type=bind,src=\$WORKSPACE/config,dst=/app/config \\
                             --user ${uid}:${gid} \\
                             python_generator
-                        docker ps"""
+                        docker ps
+                        ls -alh $WORKSPACE/generated
+                        """
                 }
             }
         }

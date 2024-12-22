@@ -18,6 +18,11 @@ parser.add_argument('output_dir', type=str, help='Path to the output directory.'
 parser.add_argument('--config_file', type=str, default="../../config/tasking.yaml", help='Path to the config file.')
 args = parser.parse_args()
 
+with open(args.output_dir + "/output.txt", "w") as f:
+    f.write("Hello, World!")
+
+exit(0)
+
 def print_dir_tree(start_path, indent=""):
     for item in os.listdir(start_path):
         item_path = os.path.join(start_path, item)
