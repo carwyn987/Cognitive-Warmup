@@ -16,6 +16,13 @@ pipeline {
         stage('Test') {
             steps {
                 script {
+                    // Ensure directories exist and have proper permissions
+                    sh """
+                        echo "Checking directories in $WORKSPACE"
+                        # mkdir -p $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
+                        chmod -R 755 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
+                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
+                    """
                     sh """ls -alh \$WORKSPACE
                        ls -alh \$WORKSPACE/config
                        docker run --rm \
