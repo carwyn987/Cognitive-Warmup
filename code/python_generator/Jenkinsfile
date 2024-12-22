@@ -21,11 +21,11 @@ pipeline {
                     def gid = sh(script: 'id -g', returnStdout: true).trim()
 
                     // Ensure directories exist and have proper permissions
-                    sh """chmod -R 777 $WORKSPACE/output
-                        chmod -R 777 $WORKSPACE/output/output.txt
-                        chmod -R 777 $WORKSPACE/source
-                        chmod -R 777 $WORKSPACE/config
-                        chmod -R 777 $WORKSPACE/config/tasking.yaml
+                    sh """chmod -R 777 $WORKSPACE/code/python_generator/output
+                        chmod -R 777 $WORKSPACE/code/python_generator/output/output.txt
+                        chmod -R 777 $WORKSPACE/code/python_generator/source
+                        chmod -R 777 $WORKSPACE/code/python_generator/config
+                        chmod -R 777 $WORKSPACE/code/python_generator/config/tasking.yaml
                     
                         ls -alh $WORKSPACE $WORKSPACE/code/python_generator
                         ls -alh $WORKSPACE/code/python_generator/config
