@@ -22,6 +22,8 @@ pipeline {
 
                     // Ensure directories exist and have proper permissions
                     sh """ls -alh \$WORKSPACE \$WORKSPACE/code/python_generator
+                        ls -alh \$WORKSPACE/code/python_generator/config
+                        ls -alh \$WORKSPACE/code/python_generator/source
                         docker run --rm \\
                             --mount type=bind,src=\$WORKSPACE/code/python_generator/source,dst=/app/source \\
                             --mount type=bind,src=\$WORKSPACE/code/python_generator/generated,dst=/app/output \\
