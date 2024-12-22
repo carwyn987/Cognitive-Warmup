@@ -16,8 +16,10 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh """./run.sh
-                          docker ps"""
+                    sh """echo $WORKSPACE
+                       cd $WORKSPACE/code/python_generator; pwd; ls -alh
+                        ./run.sh
+                        docker ps"""
                 }
             }
         }
