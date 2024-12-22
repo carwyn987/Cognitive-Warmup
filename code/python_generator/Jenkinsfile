@@ -23,7 +23,7 @@ pipeline {
                     // Ensure directories exist and have proper permissions
                     sh """
                         echo "Checking directories in $WORKSPACE"
-                        chmod -R 755 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
+                        chmod -R 777 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
                         ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config \$WORKSPACE
 
                         docker run --rm \\
