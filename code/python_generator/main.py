@@ -1,12 +1,15 @@
 #!/bin/python3
 import os
 import yaml
+import time
 import argparse
 
 from api.OpenAI import OpenAI
 from utilities.File import File, MergedFiles
 from utilities.LoadSecrets import LoadSecrets
 from utilities.Prompt import Prompt
+
+time.sleep(5)
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Generate cognitive warmup.')
