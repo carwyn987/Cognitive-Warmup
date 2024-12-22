@@ -39,7 +39,6 @@ pipeline {
                         sh """
                             echo "Running container with user ID \$uid and group ID \$gid"
                             ls -alh /app/source /app/output /app/config
-                            python /app/source/your_script.py  # or any other command you need to run
                         """
                     }
                 }
