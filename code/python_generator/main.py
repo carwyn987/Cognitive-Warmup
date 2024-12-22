@@ -3,9 +3,10 @@ import os
 import yaml
 import argparse
 
+from api.OpenAI import OpenAI
 from utilities.File import File, MergedFiles
 from utilities.LoadSecrets import LoadSecrets
-from api.OpenAI import OpenAI
+from utilities.Prompt import Prompt
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Generate cognitive warmup.')
@@ -31,3 +32,10 @@ print(merged_files.content)
 secrets = LoadSecrets(['openai'])
 OpenAI_Controller = OpenAI(secrets.openai)
 
+# Generate content
+for task in config_tasks:
+    if config[task]['enabled'] == False:
+        continue
+    print(f'Generating content for task: "{task}"')
+    #response = OpenAI_Controller.generate_text(merged_files.content, config[task])
+    # Error handling

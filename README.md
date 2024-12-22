@@ -1,6 +1,6 @@
 # Cognitive-Warmup
 
-I choose to begin work early, so I can enjoy sunlight hours afterwards. However, I encountered an issue - every morning, I'm accosted by co-workers wanting to small talk about the weather and the winds. Despite my prior verbiage, I do want to talk to my coworkers in the morning, just not about that. Furthermore, when it's time for my reponse, I'm usually tired enough where its challenging to come up with interesting answers - answers to jolt people out of their rhythm and inspire thought provoking conversation. In other words, I'm a part of the problem. This repo is dedicated to developing a daily tool to warm up your cognitive abilities, speech patterns, and provide a jump-off point for interesting conversation.
+I choose to begin work early, so I can enjoy sunlight hours afterwards. However, I encountered an issue - every morning, I'm accosted by co-workers wanting to small talk about the weather and the winds. Despite my prior verbiage, I do want to talk to my coworkers in the morning, just not about that. Furthermore, when it's time for my response, I'm usually too tired to come up with answers that jolt people out of their rhythm and inspire thought provoking conversation. In other words, I'm a part of the problem. This repo is dedicated to developing a daily tool to warm up your cognitive abilities, speech patterns, and provide a jump-off point for interesting conversation.
 
 This app will produce a "cognitive warmup" according to a cron schedule, likely once every day. Generated content will consist of various questions, possibly including fermi questions, soft-skill probing questions, interview-like questions, questions about documents uploaded to source folder. It will also include some related content to consume, likely scraped from the html sources included in this list, and related to personal documents uploaded. The Minimum Viable Product (MVP) will be text-based, providing content as a document. Then, an interactive speech-based tool will be developed to improve interactivity.
 
@@ -13,13 +13,13 @@ This app will produce a "cognitive warmup" according to a cron schedule, likely 
  - Questions referring to recent consumed academic works - likely learned from scanning ones Obsidian Vault
  - Questions related to works in provided newsletters, or listed websites (LessWrong)
 
-## System - Minimal Working Example (MWE)
+## System MVP
  - Load txt files from `./source` folder
  - Merge content in a `Content` object
  - Using `Content` object, generate various desirables
  - Return generated content to generated folder
 
-## System - Goal
+## Full System Goal
 
  - Load Stage
   - Load txt files from `./source` folder

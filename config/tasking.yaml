@@ -1,13 +1,5 @@
-task1:
- - name: "task1"
- - description: "This is task1"
- - command: "echo 'task1'"
- - schedule: "0 0 * * *"
- - enabled: true
-
-task2:
- - name: "task2"
- - description: "This is task2"
- - command: "echo 'task2'"
- - schedule: "0 0 * * *"
+fermi_question:
+ - description: "Generate a fermi question inspired by the relevant content"
+ - command: 'Generate a fermi question inspired by the following content, which will be in the format of """Filename newline content ... repeated"""'
+ - generator: combine_with_context
  - enabled: true

@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    sh """echo $WORKSPACE
+                       cd $WORKSPACE/code/python_generator; pwd; ls -alh
+                       ./build.sh"""
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    sh """./run.sh
+                          docker ps"""
+                }
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                sh 'docker stop python_generator || true'
+                sh 'docker rm python_generator || true'
+            }
+        }
+    }
+}
