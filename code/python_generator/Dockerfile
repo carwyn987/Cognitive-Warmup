@@ -10,6 +10,9 @@ RUN python3.10 -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
+# COPY source /app/source
+# COPY ../../generated /app/output
+# COPY ../../config/tasking.yaml /app/config/tasking.yaml
 RUN chmod 777 /app
 
 # Command to run the app

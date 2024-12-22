@@ -1,0 +1,8 @@
+fermi_question:
+   description: "Generate a fermi question inspired by the relevant content"
+   command: 'Generate a fermi question inspired by the following content, which will be in the format of """Filename newline content ... repeated"""'
+   generator: combine_with_context
+   role: 'system'
+   role_content: 'You are a highly creative scientist, engineer, and coder.'
+   model: 'gpt-4o-mini'
+   enabled: true
