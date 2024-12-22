@@ -21,7 +21,13 @@ pipeline {
                     def gid = sh(script: 'id -g', returnStdout: true).trim()
 
                     // Ensure directories exist and have proper permissions
-                    sh """ls -alh $WORKSPACE $WORKSPACE/code/python_generator
+                    sh """chmod -R 777 $WORKSPACE/output
+                        chmod -R 777 $WORKSPACE/output/output.txt
+                        chmod -R 777 $WORKSPACE/source
+                        chmod -R 777 $WORKSPACE/config
+                        chmod -R 777 $WORKSPACE/config/tasking.yaml
+                    
+                        ls -alh $WORKSPACE $WORKSPACE/code/python_generator
                         ls -alh $WORKSPACE/code/python_generator/config
                         ls -alh $WORKSPACE/code/python_generator/source
                         docker run --rm \\
