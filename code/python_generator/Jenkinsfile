@@ -15,27 +15,29 @@ pipeline {
         }
         stage('Test') {
             steps {
-                script {
-                    // Get the current host user ID and group ID
-                    def uid = sh(script: 'id -u', returnStdout: true).trim()
-                    def gid = sh(script: 'id -g', returnStdout: true).trim()
+                withCredentials([usernamePassword(credentialsId: 'OPENAI_API_KEY', variable: 'OPENAI_API_KEY')]) {
+                      script {
+                        // Get the current host user ID and group ID
+                        def uid = sh(script: 'id -u', returnStdout: true).trim()
+                        def gid = sh(script: 'id -g', returnStdout: true).trim()
 
-                    // Ensure directories exist and have proper permissions
-                    sh """chmod -R 777 $WORKSPACE/code/python_generator/output
-                        chmod -R 777 $WORKSPACE/code/python_generator/output/output.txt
-                        chmod -R 777 $WORKSPACE/code/python_generator/source
-                        chmod -R 777 $WORKSPACE/code/python_generator/config
-                        chmod -R 777 $WORKSPACE/code/python_generator/config/tasking.yaml
-                    
-                        ls -alh $WORKSPACE $WORKSPACE/code/python_generator
-                        ls -alh $WORKSPACE/code/python_generator/config
-                        ls -alh $WORKSPACE/code/python_generator/source
-                        docker run --rm \\
-                            --user ${uid}:${gid} \\
-                            python_generator
-                        docker ps
-                        cat $WORKSPACE/code/python_generator/output/output.txt
-                        """
+                        // Ensure directories exist and have proper permissions
+                        sh """chmod -R 777 $WORKSPACE/code/python_generator/output
+                            chmod -R 777 $WORKSPACE/code/python_generator/output/output.txt
+                            chmod -R 777 $WORKSPACE/code/python_generator/source
+                            chmod -R 777 $WORKSPACE/code/python_generator/config
+                            chmod -R 777 $WORKSPACE/code/python_generator/config/tasking.yaml
+                        
+                            ls -alh $WORKSPACE $WORKSPACE/code/python_generator
+                            ls -alh $WORKSPACE/code/python_generator/config
+                            ls -alh $WORKSPACE/code/python_generator/source
+                            docker run --rm \\
+                                --user ${uid}:${gid} \\
+                                python_generator
+                            docker ps
+                            cat $WORKSPACE/code/python_generator/output/output.txt
+                            """
+                    }
                 }
             }
         }
