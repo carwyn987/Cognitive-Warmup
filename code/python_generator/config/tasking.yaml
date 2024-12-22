@@ -5,4 +5,6 @@ fermi_question:
    role: 'system'
    role_content: 'You are a highly creative scientist, engineer, and coder.'
    model: 'gpt-4o-mini'
+   temperature: 2.0
    enabled: true
+   
