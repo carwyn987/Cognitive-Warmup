@@ -34,7 +34,7 @@ pipeline {
                             --user ${uid}:${gid} \\
                             python_generator
                         docker ps
-                        ls -alh $WORKSPACE/output
+                        cat $WORKSPACE/code/python_generator/output/output.txt
                         """
                 }
             }
