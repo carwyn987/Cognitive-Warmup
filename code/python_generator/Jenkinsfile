@@ -28,6 +28,7 @@ pipeline {
                     reuseNode true
                 }
             }
+        }
     }
     post {
         always {
