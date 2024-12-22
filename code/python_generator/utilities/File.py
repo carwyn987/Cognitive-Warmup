@@ -1,5 +1,6 @@
 import yaml
 from pathlib import Path
+from typing import List
 
 class File:
     def __init__(self, path):
@@ -8,6 +9,9 @@ class File:
         self.load()
 
     def load(self):
+        """
+        content is a string that contains the content of the file
+        """
         match self.ext:
             case "pdf":
                 return self.load_pdf()
@@ -40,3 +44,21 @@ class File:
     
     def __repr__(self):
         return str(self.path) + ": \n" + str(self.content) + "\n"
+    
+
+class MergedFiles:
+    def __init__(self, files: List[File]):
+        self.files = files
+        self.content = ""
+        self.merge()
+
+    def merge(self):
+        self.content = ""
+        for file in self.files:
+            self.content += f'Filename: "{file.path}"\n"""\n{file}\n"""\n\n'
+    
+    def __str__(self):
+        return self.content
+    
+    def __repr__(self):
+        return str(self.content)

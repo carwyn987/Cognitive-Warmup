@@ -1,0 +1,13 @@
+task1:
+ - name: "task1"
+ - description: "This is task1"
+ - command: "echo 'task1'"
+ - schedule: "0 0 * * *"
+ - enabled: true
+
+task2:
+ - name: "task2"
+ - description: "This is task2"
+ - command: "echo 'task2'"
+ - schedule: "0 0 * * *"
+ - enabled: true
