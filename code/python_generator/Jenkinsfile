@@ -25,9 +25,9 @@ pipeline {
                         ls -alh \$WORKSPACE/code/python_generator/config
                         ls -alh \$WORKSPACE/code/python_generator/source
                         docker run --rm \\
-                            --mount type=bind,src=\$WORKSPACE/code/python_generator/source,dst=/app/source \\
-                            --mount type=bind,src=\$WORKSPACE/code/python_generator/generated,dst=/app/output \\
-                            --mount type=bind,src=\$WORKSPACE/code/python_generator/config,dst=/app/config \\
+                            --mount type=bind,src='\$WORKSPACE/code/python_generator/source',dst=/app/source \\
+                            --mount type=bind,src='\$WORKSPACE/code/python_generator/generated',dst=/app/output \\
+                            --mount type=bind,src='\$WORKSPACE/code/python_generator/config',dst=/app/config \\
                             --user ${uid}:${gid} \\
                             python_generator
                         docker ps
