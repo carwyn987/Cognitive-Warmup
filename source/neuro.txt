@@ -1,5 +1,0 @@
-What is the approximate computational upper bound of the human brain?
-
-What is the correct metric to use to determine the computational bounds of the
-human brain? Is "flops" an appropriate measure? Are there better metrics to use
-for representing the expressiveness? Entropy?

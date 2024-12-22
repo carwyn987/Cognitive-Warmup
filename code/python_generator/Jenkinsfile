@@ -28,7 +28,7 @@ pipeline {
                             --user ${uid}:${gid} \\
                             python_generator
                         docker ps
-                        ls -alh $WORKSPACE/generated
+                        ls -alh $WORKSPACE/output
                         """
                 }
             }
