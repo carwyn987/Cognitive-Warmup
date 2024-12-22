@@ -15,11 +15,6 @@ parser.add_argument('output_dir', type=str, help='Path to the output directory.'
 parser.add_argument('--config_file', type=str, default="../../config/tasking.yaml", help='Path to the config file.')
 args = parser.parse_args()
 
-# Load config file
-with open(args.config_file, 'r') as file:
-    config = yaml.safe_load(file)
-    config_tasks = config.keys()
-
 # Load source files
 myfiles = []
 for root, dirs, files in os.walk(args.source_dir):
@@ -27,6 +22,11 @@ for root, dirs, files in os.walk(args.source_dir):
         myfiles.append(File(os.path.join(root, file)))
 merged_files = MergedFiles(myfiles)
 print(merged_files.content)
+
+# Load config file
+with open(args.config_file, 'r') as file:
+    config = yaml.safe_load(file)
+    config_tasks = config.keys()
 
 # Set up OpenAPI Wrapper
 secrets = LoadSecrets(['openai'])
