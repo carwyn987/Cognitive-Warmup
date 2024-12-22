@@ -4,7 +4,7 @@ import yaml
 import time
 import argparse
 
-from api.OpenAI import OpenAI
+from api.OpenAIWrapper import text_request as openai_text_request
 from utilities.File import File, MergedFiles
 from utilities.LoadSecrets import LoadSecrets
 from utilities.Prompt import PromptGenerator
@@ -31,7 +31,6 @@ with open(args.config_file, 'r') as file:
 
 # Set up OpenAPI Wrapper
 secrets = LoadSecrets(['openai'])
-OpenAI_Controller = OpenAI(secrets.openai)
 
 # Generate content
 for task in config_tasks:
@@ -44,5 +43,5 @@ for task in config_tasks:
 
     prompt = PromptGenerator("combine_with_context", config[task]['command'], merged_files.content).get_prompt()
     print("PROMPT: ", prompt)
-    response = OpenAI_Controller.text_request(merged_files.content, config[task])
+    response = openai_text_request(api_key=secrets.openai, question_content=prompt, model=model, role_content=role_content)
     print("RESPONSE: ", response)

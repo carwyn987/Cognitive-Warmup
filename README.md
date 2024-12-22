@@ -4,6 +4,17 @@ I choose to begin work early, so I can enjoy sunlight hours afterwards. However,
 
 This app will produce a "cognitive warmup" according to a cron schedule, likely once every day. Generated content will consist of various questions, possibly including fermi questions, soft-skill probing questions, interview-like questions, questions about documents uploaded to source folder. It will also include some related content to consume, likely scraped from the html sources included in this list, and related to personal documents uploaded. The Minimum Viable Product (MVP) will be text-based, providing content as a document. Then, an interactive speech-based tool will be developed to improve interactivity.
 
+# Example MVP Generated Content (Real):
+```
+**Fermi Question:**
+
+If we consider that the human brain has an approximate computational upper bound of 100 billion neurons and each neuron can form about 1,000 connections (synapses) with other neurons, how many total synapses could be formed in the human brain? 
+
+Assuming that each synapse can transmit about one signal per second, how many total signals could the brain theoretically transmit in a 24-hour period? 
+
+Please calculate the total number of synapses and the total number of signals transmitted in one day.
+```
+
 ## Sources of generation (future)
  - Recent public github updates
  - Recent posts or status updates from various platforms - X, FB, LinkedIn
