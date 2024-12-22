@@ -16,20 +16,14 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh """echo $WORKSPACE
-                       cd $WORKSPACE/code/python_generator; pwd; ls -alh
-                       echo 'Two directories up:'
-                       ls -alh ../../
-                       echo 'Two directories up / config:'
-                       ls -alh ../../config/
-                        docker run --rm \
+                    sh """docker run --rm \
                             -e "OPENAI_API_KEY=$OPENAI_API_KEY" \
                             -e "YOUTUBE_API_KEY=$YOUTUBE_API_KEY" \
                             -v $WORKSPACE/source:/app/source:ro \
                             -v $WORKSPACE/generated:/app/output \
                             -v $WORKSPACE/config:/app/config:ro \
                             python_generator:latest
-                        docker ps"""
+                       docker ps"""
                 }
             }
         }
