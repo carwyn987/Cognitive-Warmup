@@ -16,6 +16,10 @@ pipeline {
         stage('Test') {
             steps {
                 script {
+                    // Get the current host user ID and group ID
+                    def uid = sh(script: 'id -u', returnStdout: true).trim()
+                    def gid = sh(script: 'id -g', returnStdout: true).trim()
+
                     // Ensure directories exist and have proper permissions
                     sh """
                         echo "Checking directories in $WORKSPACE"
@@ -28,6 +32,7 @@ pipeline {
                             -v \$WORKSPACE/source:/app/source \\
                             -v \$WORKSPACE/generated:/app/output \\
                             -v \$WORKSPACE/config:/app/config \\
+                            --user ${uid}:${gid} \\
                             python_generator
                         docker ps"""
                 }
