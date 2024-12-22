@@ -3,13 +3,20 @@ pipeline {
     triggers {
         githubPush()
     }
+    environment {
+        IMAGE_NAME = 'python_generator'  // Docker image name
+    }
     stages {
         stage('Build') {
             steps {
                 script {
-                    sh """echo $WORKSPACE
-                       cd $WORKSPACE/code/python_generator; pwd; ls -alh
-                       ./build.sh"""
+                    sh """
+                        echo \$WORKSPACE
+                        cd \$WORKSPACE/code/python_generator
+                        pwd
+                        ls -alh
+                        ./build.sh
+                    """
                 }
             }
         }
@@ -22,19 +29,19 @@ pipeline {
 
                     // Ensure directories exist and have proper permissions
                     sh """
-                        echo "Checking directories in $WORKSPACE"
-                        chmod -R 777 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
-                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config \$WORKSPACE
+                        echo "Checking directories in \$WORKSPACE"
+                        chmod -R 777 \$WORKSPACE/source \$WORKSPACE/generated \$WORKSPACE/config
+                        ls -alh \$WORKSPACE/source \$WORKSPACE/generated \$WORKSPACE/config \$WORKSPACE
+                    """
 
-                        docker run --rm \\
-                            --mount type=bind,src=\$WORKSPACE/source,dst=/app/source \\
-                            --mount type=bind,src=\$WORKSPACE/generated,dst=/app/output \\
-                            --mount type=bind,src=\$WORKSPACE/config,dst=/app/config \\
-                            --user ${uid}:${gid} \\
-                            python_generator
-                        docker ps
-                        ls -alh $WORKSPACE/generated
+                    // Run Docker container using Docker plugin
+                    docker.image(IMAGE_NAME).inside("-v \$WORKSPACE/source:/app/source -v \$WORKSPACE/generated:/app/output -v \$WORKSPACE/config:/app/config --user ${uid}:${gid}") {
+                        sh """
+                            echo "Running container with user ID \$uid and group ID \$gid"
+                            ls -alh /app/source /app/output /app/config
+                            python /app/source/your_script.py  # or any other command you need to run
                         """
+                    }
                 }
             }
         }
@@ -42,8 +49,9 @@ pipeline {
     post {
         always {
             script {
-                sh 'docker stop python_generator || true'
-                sh 'docker rm python_generator || true'
+                // Clean up any containers if needed
+                sh 'docker ps -q --filter "name=python_generator" | xargs -r docker stop || true'
+                sh 'docker ps -aq --filter "name=python_generator" | xargs -r docker rm || true'
             }
         }
     }
