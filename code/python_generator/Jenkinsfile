@@ -29,9 +29,9 @@ pipeline {
                         docker run --rm \
                             -e "OPENAI_API_KEY=\$OPENAI_API_KEY" \\
                             -e "YOUTUBE_API_KEY=\$YOUTUBE_API_KEY" \\
-                            -v \$WORKSPACE/source:/app/source \\
-                            -v \$WORKSPACE/generated:/app/output \\
-                            -v \$WORKSPACE/config:/app/config \\
+                            --mount src=\$WORKSPACE/source,target=/app/source,type=bind \\
+                            --mount src=\$WORKSPACE/generated,target=/app/output,type=bind \\
+                            --mount src=\$WORKSPACE/config,target=/app/config,type=bind \\
                             --user ${uid}:${gid} \\
                             python_generator
                         docker ps"""
