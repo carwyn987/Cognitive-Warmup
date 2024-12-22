@@ -17,23 +17,19 @@ pipeline {
             steps {
                 script {
                     // Ensure directories exist and have proper permissions
-                    sh "sleep 5"
                     sh """
                         echo "Checking directories in $WORKSPACE"
-                        # mkdir -p $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
                         chmod -R 755 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
-                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
-                    """
-                    sh """ls -alh \$WORKSPACE
-                       ls -alh \$WORKSPACE/config
-                       docker run --rm \
-                            -e "OPENAI_API_KEY=\$OPENAI_API_KEY" \
-                            -e "YOUTUBE_API_KEY=\$YOUTUBE_API_KEY" \
-                            -v \$WORKSPACE/source:/app/source \
-                            -v \$WORKSPACE/generated:/app/output \
-                            -v \$WORKSPACE/config:/app/config \
+                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config \$WORKSPACE
+
+                        docker run --rm \
+                            -e "OPENAI_API_KEY=\$OPENAI_API_KEY" \\
+                            -e "YOUTUBE_API_KEY=\$YOUTUBE_API_KEY" \\
+                            -v \$WORKSPACE/source:/app/source \\
+                            -v \$WORKSPACE/generated:/app/output \\
+                            -v \$WORKSPACE/config:/app/config \\
                             python_generator
-                       docker ps"""
+                        docker ps"""
                 }
             }
         }
