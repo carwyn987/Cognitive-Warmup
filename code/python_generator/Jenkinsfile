@@ -14,26 +14,25 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                    image 'python_generator' // Replace with your specific image
-                    args """
-                        -v ${env.WORKSPACE}/source:/app/source:ro \
-                        -v ${env.WORKSPACE}/generated:/app/output \
-                        -v ${env.WORKSPACE}/config:/app/config:ro \
-                        --user \$(id -u):\$(id -g)
-                    """
-                    reuseNode true
-                }
-            }
             steps {
                 script {
+                    // Get the current host user ID and group ID
+                    def uid = sh(script: 'id -u', returnStdout: true).trim()
+                    def gid = sh(script: 'id -g', returnStdout: true).trim()
+
                     // Ensure directories exist and have proper permissions
                     sh """
                         echo "Checking directories in $WORKSPACE"
                         chmod -R 755 $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config
-                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config $WORKSPACE
-                    """
+                        ls -alh $WORKSPACE/source $WORKSPACE/generated $WORKSPACE/config \$WORKSPACE
+
+                        docker run --rm \
+                            --mount src=\$WORKSPACE/source,target=/app/source,type=bind \\
+                            --mount src=\$WORKSPACE/generated,target=/app/output,type=bind \\
+                            --mount src=\$WORKSPACE/config,target=/app/config,type=bind \\
+                            --user ${uid}:${gid} \\
+                            python_generator
+                        docker ps"""
                 }
             }
         }
