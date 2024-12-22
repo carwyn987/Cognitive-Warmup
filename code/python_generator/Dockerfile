@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
 # Command to run the app
-ENTRYPOINT ["python", "main.py", "--config_file /app/config/tasking.yaml", "/app/source", "/app/output"]
+ENTRYPOINT ["python", "main.py", "--config_file=/app/config/tasking.yaml", "/app/source", "/app/output"]
