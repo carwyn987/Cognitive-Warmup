@@ -1,7 +1,7 @@
 from openai import OpenAI
 from typing import AnyStr, Dict
 
-def text_request(api_key, question_content: str, model: str = "gpt-4o-mini", role_content: str = "You are a helpful assistant.", temperature: float = 2.0) -> str:
+def text_request(api_key, question_content: str, model: str = "gpt-4o-mini", role_content: str = "You are a helpful assistant.", temperature: float = 1.0) -> str:
     """
     Calls the OpenAI API to generate a text completion based on a system/user message pair.
     """

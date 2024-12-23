@@ -24,6 +24,7 @@ class PromptGenerator:
             f"{self.command} Use the following context for inspiration, "
             f"which begins and ends with \"\"\" and follows the format filename\\n content:\n"
             f"\"\"\"\n{self.content}\n\"\"\""
+            f"Remember, follow instructions: {self.command}"
         )
 
     def combine_simple(self):

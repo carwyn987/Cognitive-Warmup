@@ -52,3 +52,7 @@ Please calculate the total number of synapses and the total number of signals tr
 Only the OpenAI key is strictly necessary. Secrets are loaded from environment variables, which must be set with e.g.
 
 `export OPENAI_API_KEY=<INSERT_OPENAI_KEY_HERE>`
+
+## Project Links (For personal development, not public access)
+ - https://platform.openai.com/settings/organization/usage
+ - http://localhost:8080/job/cognitive_warmup_python_generator/

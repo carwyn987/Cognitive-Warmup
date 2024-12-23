@@ -1,7 +1,6 @@
 #!/bin/python3
 import os
 import yaml
-import time
 import argparse
 
 from api.OpenAIWrapper import text_request as openai_text_request
@@ -39,10 +38,11 @@ for task in config_tasks:
     role = config[task]['role'] if 'role' in config[task] else "system"
     role_content = config[task]['role_content'] if 'role_content' in config[task] else "You are a helpful assistant."
     model = config[task]['model'] if 'model' in config[task] else "gpt-4o-mini"
-    temperature = config[task]['temperature'] if 'temperature' in config[task] else 2.0
+    temperature = float(config[task]['temperature']) if 'temperature' in config[task] else 1.0
     print(f'Generating content for task: "{task}"')
+    print("temp: ", temperature, type(temperature))
 
     prompt = PromptGenerator("combine_with_context", config[task]['command'], merged_files.content).get_prompt()
     print("PROMPT: ", prompt)
-    response = openai_text_request(api_key=secrets.openai, question_content=prompt, model=model, role_content=role_content, temperature = temperature)
+    response = openai_text_request(api_key=secrets.openai, question_content=prompt, model=model, role_content=role_content, temperature=temperature)
     print("RESPONSE: ", response)
