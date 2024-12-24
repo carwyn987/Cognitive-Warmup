@@ -17,15 +17,18 @@ pipeline {
         stage('Run Node App in Docker') {
             steps {
                 script {
-                    def result = docker.image("my-node-app:latest").inside {
-                        sh(script: 'node app.js', returnStatus: true)
-                    }
-                    if (result != 0) {
-                        error "Node app.js failed with exit code ${result}"
+                    dir("${env.WORKSPACE}/code/nodejs_realtime_webapp") {
+                        def result = docker.image("my-node-app:latest").inside {
+                            sh(script: 'node app.js', returnStatus: true)
+                        }
+                        if (result != 0) {
+                            error "Node app.js failed with exit code ${result}"
+                        }
                     }
                 }
             }
         }
+    }
     }
     post {
         always {
