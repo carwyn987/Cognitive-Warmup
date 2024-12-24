@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    environment {
+        OPENAI_API_KEY = credentials('OPENAI_API_KEY')
+    }
+    stages {
+        stage('Run Node App') {
+            steps {
+                script {
+                    def result = sh(script: 'node app.js', returnStatus: true)
+                    if (result != 0) {
+                        error "Node app.js failed with exit code ${result}"
+                    }
+                }
+            }
+        }
+    }
+}
