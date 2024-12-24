@@ -8,6 +8,8 @@ pipeline {
             steps {
                 script {
                     sh 'pwd'
+                    sh "ls -alh"
+                    sh "ls -alh $WORKSPACE"
                     sh "ls -la $WORKSPACE/cognitive_warmup/code/nodejs_realtime_webapp"
                     def image = docker.build("my-node-app:latest", "${env.WORKSPACE}/cognitive_warmup/code/nodejs_realtime_webapp")
                 }
