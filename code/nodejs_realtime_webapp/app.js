@@ -49,4 +49,4 @@ async function init() {
     await pc.setRemoteDescription(answer);
   }
   
-//init();
+init();
