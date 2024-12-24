@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                dir('/home/carwyn/dev/cognitive_warmup/code/nodejs_realtime_webapp') {
+                dir('cognitive_warmup/code/nodejs_realtime_webapp') {
                     script {
                         def image = docker.build("my-node-app:latest", ".")
                     }
