@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ephemeral_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.ephemeral_server
+    command: node ephemeral_server.mjs
+    
+
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile.app
+    command: node app.mjs
+    depends_on:
+      - ephemeral_server
