@@ -7,3 +7,6 @@ https://platform.openai.com/docs/guides/realtime-webrtc
 
 # Ephemeral Server
 https://platform.openai.com/docs/guides/realtime-webrtc#creating-an-ephemeral-token
+
+# OpenAI Pricing
+https://openai.com/api/pricing/ 

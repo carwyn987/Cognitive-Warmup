@@ -1,6 +1,8 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 
 // An endpoint which would work with the client code above - it returns
 // the contents of a REST API request to this protected endpoint

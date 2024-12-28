@@ -1,6 +1,3 @@
-//import pkg from "wrtc";
-//const { RTCPeerConnection } = pkg;
-
 console.log("Hello from Node.js!");
 
 async function init() {
@@ -25,10 +22,25 @@ async function init() {
   
     // Set up data channel for sending and receiving events
     const dc = pc.createDataChannel("oai-events");
+
     dc.addEventListener("message", (e) => {
       // Realtime server events appear here!
-      console.log(e);
+      const realtimeEvent = JSON.parse(e.data);
+      console.log(realtimeEvent);
     });
+
+    // Add an event listener for when the data channel is open
+    dc.addEventListener("open", () => {
+      // Send a client event after the data channel is open
+      const responseCreate = {
+          type: "response.create",
+          response: {
+              modalities: ['audio','text'],
+              instructions: "Write a haiku about code. Before doing this, repeat the instruction.",
+          },
+      };
+      dc.send(JSON.stringify(responseCreate));
+    }, { once: true });
   
     // Start the session using the Session Description Protocol (SDP)
     const offer = await pc.createOffer();
@@ -50,6 +62,8 @@ async function init() {
       sdp: await sdpResponse.text(),
     };
     await pc.setRemoteDescription(answer);
-  }
-  
+}
+
 init();
+
+
