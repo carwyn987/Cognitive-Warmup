@@ -1,0 +1,47 @@
+The concept of "deserving" feels surprisingly arbitrary, and I doubt this is a
+particularly common feeling. Most often, the verb "deserve" is used in a
+sentence like "I deserved to get the position I applied for over". However,
+such a phrase seems to imply "I deserve to get a reward (position, in this
+case) over the other applicants".
+
+Why does one "deserve" anything? Commonly, "poor circumstances" are used to
+justify deservingness over others. However, if
+questioned upon this idea, the conversation ubiquitously turns to the idea that
+it's not about poor circumstances, but rather that they had to work harder for
+some target reward than others applying. Does "hard work" itself result in
+deservingness? Perhaps, but this seems rather arbitrary. The level two of this
+line of thinking is that it's not the hard work for the position, but rather
+the improvement and persistance that should be measured. Someone from a less
+fortunate background must have proven their work ethic, problem solving, and
+exceptional perserverence if they manage to match someone from a more wealthy
+background.
+
+This argument feels satisfying when one considers not the improvement, not the
+perserverance, but rather the future potential. If I were a job owner, I
+wouldn't care about the background of the candidate, but rather the potential
+they have to benefit my business. From that perspective, however, there is no
+deservingness that exists except from the lens of the hirer.
+
+From this thinking, I wonder how to analyze statements like "all children
+deserve the opportunity to have a good education." On one hand, of course I
+agree, who doesn't deserve the opportunity to be educated. On the other, does
+deservingness come into play, or is this solely optimalism?
+
+#Thought Experiment:
+
+Island of 99 people (equal distribution of low, medium, and high skill, chosen
+arbitrarily by a higher power to be stuck on the island).
+10 high skill jobs
+ - Do the most fitting candidates deserve the job? I.e. do previous mechanics
+   deserve the jobs that are focused on mechanical work?
+ - Do the most skilled (some universal measure) deserve the jobs? If it helps
+   the though process, imagine everyone is the same profession for this
+   question, and we can measure the exact proficiency of each candidate for the
+   job in a single number.
+ - If the job starts a week after we are put on the island, and I alone spend
+   the entire week practicing the job skills, do I now deserve the job?
+ - If I really want the job, but everyone else is only slightly above impartial
+   in their want, do I deserve the job over them?
+
+
+
