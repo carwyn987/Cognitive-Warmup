@@ -29,6 +29,9 @@ Please calculate the total number of synapses and the total number of signals tr
  - Merge content in a `Content` object
  - Using `Content` object, generate various desirables
  - Return generated content to generated folder
+ - Start web app
+ - Load generated content as iterable
+ - Produce web server with ui enabling content consumption
 
 ## Full System Goal
 

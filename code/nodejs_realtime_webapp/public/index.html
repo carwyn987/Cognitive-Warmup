@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebRTC Demo</title>
+    <title>Cognitive Warmup</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>WebRTC Demo</h1>
+    <header>
+        <h1>Cognitive Warmup</h1>
+    </header>
+    <div class="container">
+        <button id="previous" disabled>Previous</button>
+        <button id="start">Start</button>
+        <button id="next">Next</button>
+    </div>
+    <footer>
+        &copy; 2025 Cognitive Warmup
+    </footer>
+    <script>
+        document.getElementById('start').addEventListener('click', function() {
+            document.getElementById('previous').disabled = false;
+            document.getElementById('start').disabled = true;
+        });
+
+        document.getElementById('next').addEventListener('click', function() {
+            document.getElementById('previous').disabled = true;
+            document.getElementById('start').disabled = false;
+        });
+    </script>
     <script src="app.mjs"></script>
 </body>
 </html>
