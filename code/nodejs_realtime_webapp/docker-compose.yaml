@@ -5,13 +5,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.ephemeral_server
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
     command: node ephemeral_server.mjs
+    ports:
+      - "3000:3000" # Map port 3000 in the container to 3000 on the host
     
-
-  app:
-    build: 
+  web:
+    build:
       context: .
-      dockerfile: Dockerfile.app
-    command: node app.mjs
-    depends_on:
-      - ephemeral_server
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:80" # Map port 80 in the container to 8080 on the host

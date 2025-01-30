@@ -7,6 +7,7 @@ app.use(cors());
 // An endpoint which would work with the client code above - it returns
 // the contents of a REST API request to this protected endpoint
 app.get("/session", async (req, res) => {
+  console.log("Requesting eph key");
   const r = await fetch("https://api.openai.com/v1/realtime/sessions", {
     method: "POST",
     headers: {
@@ -21,7 +22,9 @@ app.get("/session", async (req, res) => {
   const data = await r.json();
 
   // Send back the JSON we received from the OpenAI REST API
+  console.log("Ephemeral key received, sending back");
   res.send(data);
 });
 
 app.listen(3000);
+console.log("Server running at http://localhost:3000/");

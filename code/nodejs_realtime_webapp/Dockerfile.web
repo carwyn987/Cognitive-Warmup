@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+# Copy static files to the Nginx directory
+COPY public/ /usr/share/nginx/html
+
+# Copy data in now, later will make this requestable from backend
+COPY texts/ /usr/share/nginx/html/data
+
+# Expose port 80 for the web server
+EXPOSE 80

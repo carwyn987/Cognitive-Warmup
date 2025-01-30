@@ -1,8 +1,12 @@
+import wrtc from 'wrtc';
+const { RTCPeerConnection } = wrtc;
+
 console.log("Hello from Node.js!");
+await new Promise(resolve => setTimeout(resolve, 1000));
 
 async function init() {
     // Get an ephemeral key from your server - see server code below
-    const tokenResponse = await fetch("http://localhost:3000/session");
+    const tokenResponse = await fetch("http://ephemeral_server:3000/session");
     const data = await tokenResponse.json();
     const EPHEMERAL_KEY = data.client_secret.value;
   
