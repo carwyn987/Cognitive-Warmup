@@ -2,17 +2,52 @@
 let pc; // Global RTCPeerConnection
 let dc; // Global DataChannel
 let EPHEMERAL_KEY; // Global Ephemeral key
-
+let files = []; // Global array to store file names
 let currentFileIndex = 0;
-const files = [
-    "file1.txt", "file2.txt", "file3.txt", // Add your text files here
-];
-const filePath = "/data/"; // Directory where your files are stored on the server
+console.log("Script loaded");
+
+let filePath = "data/"; // Directory where your files are stored on the server
+async function fetchFileNames(filePath) {
+    try {
+      const response = await fetch('http://localhost:8080/data/');
+      const html = await response.text(); // Get the directory listing as HTML
+      console.log(html);  // Log the HTML of the directory listing
+  
+      // Create a DOM parser to parse the HTML
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      
+      // Get all <a> tags in the document
+      const links = doc.querySelectorAll('a');
+  
+      // Extract filenames (excluding the parent directory link '../')
+      const filenames = Array.from(links)
+        .map(link => link.textContent)
+        .filter(filename => filename !== '../');  // Exclude the parent directory link
+  
+      console.log(filenames);  // Log the filenames
+      return filenames;
+    } catch (error) {
+      console.error('Error fetching directory listing:', error);
+    }
+  }
+  
+  (async () => {
+    const files = await fetchFileNames(filePath);  // Assuming `filePath` is not needed as it's not used
+    if (!files || files.length === 0) {
+      alert("No files found. Please add some files and try again.");
+    }
+  })();
+  
 
 async function loadFile(fileName) {
+    console.log("Loading file:", fileName);
+    files = await fetchFileNames(filePath); // Reload the file list
     try {
+        console.log("Filepath:", filePath, ", Loading file:", fileName);
         const response = await fetch(`${filePath}${fileName}`);
-        const text = await response.text();
+        let text = await response.text();
+        text = "\"" + text + "\"" + "\n Ask me this now and don't include any other words.";
         return text;
     } catch (error) {
         console.error("Error loading file:", error);
@@ -51,7 +86,7 @@ async function overrideConversationAndStartNewPrompt() {
 
     dc.onopen = async () => {
         // Load new prompt based on current file index or user selection
-        const promptText = await loadFile(files[currentFileIndex]);
+        const promptText = await loadFile(files[currentFileIndex]); // TODO: This is reloading the prompt, remove one or the other
         console.log("Loaded new prompt:", promptText);
         if (promptText) {
             const responseCreate = {
@@ -122,7 +157,7 @@ document.getElementById("previous").addEventListener("click", async () => {
         const promptText = await loadFile(files[currentFileIndex]);
         if (promptText) {
             console.log("Loaded next prompt:", promptText);
-            await overrideConversationAndStartNewPrompt(promptText);
+            await overrideConversationAndStartNewPrompt();
         }
     }
     document.getElementById("previous").disabled = currentFileIndex === 0;

@@ -46,3 +46,8 @@ for task in config_tasks:
     print("PROMPT: ", prompt)
     response = openai_text_request(api_key=secrets.openai, question_content=prompt, model=model, role_content=role_content, temperature=temperature)
     print("RESPONSE: ", response)
+
+    # Write file
+    output_file = os.path.join(args.output_dir, task + ".txt")
+    with open(output_file, 'w') as file:
+        file.write(response)

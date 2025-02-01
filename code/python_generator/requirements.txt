@@ -1,3 +1,4 @@
 openai
 argparse
 pyyaml
+numpy

@@ -10,10 +10,12 @@ services:
     command: node ephemeral_server.mjs
     ports:
       - "3000:3000" # Map port 3000 in the container to 3000 on the host
-    
+    user: "${UID}:${GID}" # Specify the user ID and group ID
+
   web:
     build:
       context: .
       dockerfile: Dockerfile.web
     ports:
       - "8080:80" # Map port 80 in the container to 8080 on the host
+    user: "${UID}:${GID}" # Specify the user ID and group ID

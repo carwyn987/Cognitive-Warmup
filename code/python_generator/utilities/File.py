@@ -1,6 +1,7 @@
 import yaml
 from pathlib import Path
 from typing import List
+import numpy as np
 
 class File:
     def __init__(self, path):
@@ -52,9 +53,11 @@ class MergedFiles:
         self.content = ""
         self.merge()
 
-    def merge(self):
+    def merge(self, prob=0.6):
         self.content = ""
-        for file in self.files:
+        num_choose = int(len(self.files) * prob)
+        selected_files = np.random.choice(self.files, num_choose, replace=False)
+        for file in selected_files:
             self.content += f'Filename: "{file.path}"\n"""\n{file}\n"""\n\n'
     
     def __str__(self):
