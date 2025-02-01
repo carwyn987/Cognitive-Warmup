@@ -23,10 +23,14 @@ pipeline {
                 def uid = sh(script: 'id -u', returnStdout: true).trim()
                 def gid = sh(script: 'id -g', returnStdout: true).trim()
 
-                // Ensure directories exist and have proper permissions
-                sh "chmod -R 777 $WORKSPACE/code/python_generator"
-                sh 'docker run --rm -e "OPENAI_API_KEY=\$OPENAI_API_KEY" --user ${uid}:${gid} python_generator'
-                sh "docker ps; cat $WORKSPACE/code/python_generator/output/output.txt"
+                sh """
+                mkdir output
+
+                # Ensure directories exist and have proper permissions
+                sh chmod -R 777 $WORKSPACE/code/python_generator
+                sh docker run -v output:/app/output -e "OPENAI_API_KEY=\$OPENAI_API_KEY" --rm --user ${uid}:${gid} python_generator
+                sh docker ps; cat $WORKSPACE/code/python_generator/output/output.txt
+                """
                 }
             }
         }
