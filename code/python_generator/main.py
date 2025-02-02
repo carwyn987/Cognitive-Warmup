@@ -49,5 +49,7 @@ for task in config_tasks:
 
     # Write file
     output_file = os.path.join(args.output_dir, task + ".txt")
+    if os.path.exists(output_file):
+        os.remove(output_file)
     with open(output_file, 'w') as file:
         file.write(response)

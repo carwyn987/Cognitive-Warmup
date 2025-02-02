@@ -6,43 +6,40 @@ let files = []; // Global array to store file names
 let currentFileIndex = 0;
 console.log("Script loaded");
 
-let filePath = "data/"; // Directory where your files are stored on the server
+let filePath = "data/";
 async function fetchFileNames(filePath) {
     try {
-      const response = await fetch('http://localhost:8080/data/');
-      const html = await response.text(); // Get the directory listing as HTML
-      console.log(html);  // Log the HTML of the directory listing
-  
-      // Create a DOM parser to parse the HTML
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      
-      // Get all <a> tags in the document
-      const links = doc.querySelectorAll('a');
-  
-      // Extract filenames (excluding the parent directory link '../')
-      const filenames = Array.from(links)
+        const response = await fetch('http://localhost:8080/' + filePath);
+        const html = await response.text();
+        console.log(html);
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        console.log(doc);
+        const links = doc.querySelectorAll('a');
+        console.log(links);
+
+        const filenames = Array.from(links)
         .map(link => link.textContent)
         .filter(filename => filename !== '../');  // Exclude the parent directory link
-  
-      console.log(filenames);  // Log the filenames
-      return filenames;
+
+        console.log(filenames);
+        return filenames;
     } catch (error) {
-      console.error('Error fetching directory listing:', error);
+        console.error('Error fetching directory listing:', error);
     }
-  }
+}
   
-  (async () => {
-    const files = await fetchFileNames(filePath);  // Assuming `filePath` is not needed as it's not used
+(async () => {
+    files = await fetchFileNames(filePath);  // Assuming `filePath` is not needed as it's not used
     if (!files || files.length === 0) {
-      alert("No files found. Please add some files and try again.");
+        alert("No files found. Please add some files and try again.");
     }
-  })();
+})();
   
 
 async function loadFile(fileName) {
     console.log("Loading file:", fileName);
-    files = await fetchFileNames(filePath); // Reload the file list
     try {
         console.log("Filepath:", filePath, ", Loading file:", fileName);
         const response = await fetch(`${filePath}${fileName}`);
@@ -86,7 +83,7 @@ async function overrideConversationAndStartNewPrompt() {
 
     dc.onopen = async () => {
         // Load new prompt based on current file index or user selection
-        const promptText = await loadFile(files[currentFileIndex]); // TODO: This is reloading the prompt, remove one or the other
+        const promptText = await loadFile(files[currentFileIndex]);
         console.log("Loaded new prompt:", promptText);
         if (promptText) {
             const responseCreate = {
@@ -126,39 +123,24 @@ async function overrideConversationAndStartNewPrompt() {
 document.getElementById("start").addEventListener("click", async () => {
     document.getElementById("previous").disabled = true;
     document.getElementById("start").disabled = true;
-
-    // Load file on start
-    const promptText = await loadFile(files[currentFileIndex]);
-    if (promptText) {
-        console.log("Loaded prompt:", promptText);
-    }
-
     await overrideConversationAndStartNewPrompt();  // Initialize WebRTC and the OpenAI interaction
 });
 
 document.getElementById("next").addEventListener("click", async () => {
     if (currentFileIndex < files.length - 1) {
         currentFileIndex++;
-        const promptText = await loadFile(files[currentFileIndex]);
-        if (promptText) {
-            console.log("Loaded next prompt:", promptText);
-            await overrideConversationAndStartNewPrompt();
-        }
+        await overrideConversationAndStartNewPrompt();
     }
 
     // Reset start button after navigating to the next file
     document.getElementById("previous").disabled = false;
-    document.getElementById("next").disabled = currentFileIndex === files.length - 1;
+    document.getElementById("next").disabled = currentFileIndex >= files.length - 1;
 });
 
 document.getElementById("previous").addEventListener("click", async () => {
     if (currentFileIndex > 0) {
         currentFileIndex--;
-        const promptText = await loadFile(files[currentFileIndex]);
-        if (promptText) {
-            console.log("Loaded next prompt:", promptText);
-            await overrideConversationAndStartNewPrompt();
-        }
+        await overrideConversationAndStartNewPrompt();
     }
-    document.getElementById("previous").disabled = currentFileIndex === 0;
+    document.getElementById("previous").disabled = currentFileIndex <= 0;
 });

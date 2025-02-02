@@ -6,7 +6,7 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     volumes:
-      - ./nodejs_realtime_webapp/output:/app/output
+      - ./python_generator/output:/app/output
       - ./python_generator/source:/app/source
       - ./python_generator/config:/app/config
     restart: "no"
@@ -18,7 +18,7 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     depends_on:
       - generator
-    command: ["sh", "-c", "sleep 10 && node ephemeral_server.mjs"] # Replace with health check
+    command: ["sh", "-c", "sleep 15 && node ephemeral_server.mjs"] # Replace with health check
     ports:
       - "3000:3000"
 
@@ -26,11 +26,13 @@ services:
     build:
       context: nodejs_realtime_webapp
       dockerfile: Dockerfile.web
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
     depends_on:
       - generator
       - ephemeral_server
     volumes:
       - ./python_generator/output:/usr/share/nginx/html/data
-    command: ["sh", "-c", "sleep 7 && nginx -g 'daemon off;'"] # Replace with health check
+    command: ["sh", "-c", "sleep 15 && nginx -g 'daemon off;'"] # Replace with health check
     ports:
       - "8080:80"
