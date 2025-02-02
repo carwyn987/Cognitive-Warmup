@@ -26,8 +26,6 @@ services:
     build:
       context: nodejs_realtime_webapp
       dockerfile: Dockerfile.web
-    environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
     depends_on:
       - generator
       - ephemeral_server

@@ -1,0 +1,411 @@
+https://www.lesswrong.com/posts/CTBta9i8sav7tjC2r/how-to-hopefully-ethically-make-money-off-of-agi
+
+This point Noah made is worth considering, though I think we need to be honest about what skills we have / which ones we can develop. In a full AGI scenario, where all humans are exceeded in all skills by AIs, it seems unlikely that even the best programmers etc will be able to make significant returns. In the lead up to that period, there's still an open question about which jobs exactly get replaced in what order. 
+
+For example, everyone seemed very surprised when art got automated first - it was always assumed that creative tasks would be the last ones to go! (This still could be true if we place a huge premium on human-created art.) It seems reasonable that anyone working directly on improving AI could still earn a large premium for many years, and so relying on that career/human capital seems like a good strategy. But if you expect both 1) AGI soon, and 2) many/most jobs replaced, then I think people shouldn't assume they'll be able to earn any income in future periods. (Social implications of that are massive, expect taxation of AGI + universal basic income, mass charity, etc, etc - but the point stands.)
+
+NoahK
+Completely agree with Will about most people's careers not necessarily being worth all that much once AGI is here. I think it's an argument for trying to grab money via your career now, instead of doing things that supposedly build human career capital but take a while to pay off. Do quant trading over consulting, don't go to grad school, try to front-load earnings as much as possible. (EDIT: to Zvi's point, human and career capital are different. I'm really just talking about career capital here - broader social connections and reputation are likely to be exceedingly important in many futures). 
+
+I do expect the transitional period around AGI to create a lot of high value entrepreneurial opportunities for those with that skillset. Unclear how long to expect it to take for things to reach a new equilibrium. 
+
+Zvi
+A point I have not seen made so far, that is worth considering, is in which worlds is the value of having money high rather than low for you? 
+
+In the extreme, in the world where doom occurs and everyone dies, dying with the most toys is still dead. Or there is a regime change or revolution or confiscatory taxation regime or other transformation where old resources stop having meaning. Or if we get into a post-scarcity utopia situation of some kind somehow, perhaps you did not need money. 
+
+Whereas there are other scenarios where having funds in the right place at the right time could be hugely impactful - which I would guess are often exactly the scenarios where interest rates are very high. Or worlds in which those without capital get left behind. So you'd want trades and investments that pay off in the worlds where wealth is valuable, and to worry less about when wealth is not so valuable. 
+
+NoahK
+Yeah you kind of have to assume that things will get weird but not too weird. It's not really possible to hedge either the apocalypse or a global revolution, so you can ignore those states of the worlds when pricing assets (more or less). 
+
+This is less true if you expect your actions to actually have a meaningful impact on the state of the world. Like if you think there may come a time when if you have enough money the apocalypse can be averted vs not, you should perhaps invest differently than someone who believes he or she is only ever along for the ride. 
+
+NoahK
+I think insofar as you expect rates to go up in response to growth that can't really be an argument for bearish equity. At worst, "not as bullish as you'd otherwise be given growth expectations.". 
+
+Zvi
+Career capital is one form of human capital or social capital. Broadly construed, such assets are indeed a large portion of most people's portfolios. I'd rather be 'rich' in the sense of having my reputation, connections, family and skills than 'rich' in the sense of having my investment portfolio, in every possible sense. This is one reason not to obsess too much about your exact portfolio configuration per se, and worry more about building the right human and social capital instead. 
+
+And yes, if you think timelines to transformation are relatively short, then that too should consider the impact on what is valuable. I certainly would not plan on anything like a 'tenure track' or other long-term plan that does not pay off for many years. 
+
+Especially I would warn against looking for the illusion of security or normality - the idea that you are set if everything stays normal should not bring too much comfort. But on the flip side, if things stay more normal for longer than you expect, you don't want to mean you're screwed.
+
+Cosmos
+A point I have not seen made so far, that is worth considering, is in which worlds is the value of having money high rather than low for you?
+
+I agree very much with this point, and I see a couple scenarios where your wealth endowment matters. One world is where there are clear and urgent ways to spend money to directly improve outcomes, eg a huge spend on AI safety or whatnot. I suspect that's why most EAs are considering this question.
+
+The other is a world more like a slow takeoff Age of Ems type scenario, where there isn't total obsolescence of all forms of humanity, and maybe there's a minimal social safety net because it would be very cheap at that point, but if you want any meaningful large impact on humanity's future it absolutely depends on what resources you can muster to eg gain compute power to run more copies of yourself. I definitely put non-zero odds of this being a potential future!
+
+NoahK
+The other is a world more like a slow takeoff Age of Ems type scenario, where there isn't total obsolescence of all forms of humanity, and maybe there's a minimal social safety net because it would be very cheap at that point, but if you want any meaningful large impact on humanity's future it absolutely depends on what resources you can muster to eg gain compute power to run more copies of yourself.
+
+For whatever it's worth, this is the strange future I find most personally plausible and certainly most worth thinking about/hedging. 
+
+Zvi
+Ultimately I still expect growth to be so large that will outweigh any drag on stocks due to rates.
+
+Right, I do as well in these scenarios, but I wanted to point out that if a given stock/sector/etc 'misses out' on the explosive growth, then their value rather than staying static could drop quite a bit.
+
+Also I have to assume that a lot of businesses are going to get disrupted, and hard. There will be losers. A lot of why I like individual stocks when investing domestically is that while I don't know if I can reliably pick winners, I do know I can identify losers I want to avoid.
+
+NoahK
+Anyone short Chegg in February? I think there will be a lot of opportunities like that over the next few years at least. 
+
+Cosmos
+Its not really possible to hedge either the apocalypse or a global revolution, so you can ignore those states of the worlds when pricing assets (more or less). 
+
+Brief disagreement here - it's true you can't hedge something like a total AI takeover / x-risk, but you can certainly hedge things like a revolution or catastrophic risks. Personally I think it's wise to consider manageable downside scenarios and allocate just a few % of your portfolio to robustness, from cheap things like "stockpile food and water" to more expensive things like "physical gold and silver coins somewhere hidden but where you can access them in an emergency"
+
+Zvi
+Agree with Will on hedging some revolutions - you can do it if you want to intentionally do exactly that and pay a premium to do so, and with sufficient wealth that is a highly reasonable play. Alas AI-induced such things are less likely to play nicely with that kind of move, as Altman noted about his bunker.
+
+NoahK
+Yeah I agree you can hedge revolutions historically (to a degree). I'm a bit skeptical that if AI goes badly - or simply ends up being Communist - that storing gold underground will matter much if at all. But I don't think much hinges on this. 
+
+Cosmos
+I wanted to point out that if a given stock/sector/etc 'misses out' on the explosive growth, then their value rather than staying static could drop quite a bit.
+
+Yes, and this is why in my very first post I suggested something like "own the index fund" - that will automatically rebalance more funds into winners, and the losers get downweighted until they become zero. If you don't have a very strong thesis about which entire industries will benefit vs not, it really seems like you shouldn't bet on anything other than "equities in general"
+
+I'm also happy to do some speculation here about what might out/underperform. For example, I think it's a pretty good bet that raw materials and refining will become a huge bottleneck in the immediate term. For the run up into rapid growth, before we get huge new supply coming online (will we? what about regulations??), raw materials seem like they could really grow in value...
+
+Debt and Interest rates effects of AGI
+Cosmos
+Let's focus a bit on the two broadest categories of assets: debt and equity. Debt is (normally) a fixed, known in advance payment, and the yield of that asset is determined by prevailing interest rates plus uncertainty, etc. Equity is the "residual" claim after debts are paid, it allows for unlimited upside, but also it gets paid after all debts so if the business doesn't perform well the equity side gets nothing.
+
+High growth usually means lots of profitable investment opportunities. Debt is most useful when it's paying for something like a fixed capital investment - you know roughly how much money you need, what you need to build, you can assign the capital as collateral for the loan (so the debt gets repaid if the project fails), you have some pretty good guess about how much this investment will pay off over time. A rapidly growing (and effectively brand new) AGI economy will need lots of such investments, and so there will both be good opportunities to invest, and it means that financial capital will become extremely scarce as limited current resources pursue the best projects. Thus we can reasonably assume that interest rates will grow very large. This increase in rates (yields) means that existing debts will lose a lot of value, so it seems risky to hold a lot of current debt/bonds going into this growth period. It also means that having cash on hand could allow your money to grow at an extremely rapid rate. 
+
+This suggests that insofar as you want a cash/bonds portion of your portfolio, you want to keep it as cash invested in extremely short term securities (money market funds, T-bills, etc)
+
+(A perhaps less obvious implication is that this could make it a lot harder for governments to finance themselves, as they will also be facing an extremely high prevailing interest rate. Their best bet may be to raise taxes and try to balance the budget, which hopefully should be generating lots of revenue in a growing economy... but if they still are reliant on debt financing this could become very difficult.)
+
+NoahK
+I like Will's point a lot about governments potentially struggling to finance themselves under a much higher interest rate environment. Seems like this - plus widening inequality - could lead to a very large increase in taxes. Possibly this would include previously unheard of things like taxing unrealized gains or a wealth tax. 
+
+Cosmos
+One worry there is that rising interest rates is not so great for stock prices, so you'd want to consider whether to cover that base.
+
+It's worth considering the channels by which interest rates hurt stock prices. Insofar as there are better fixed investments, it's tempting to get a known large return than an uncertain return. But if I had to guess, the returns on investments will (at least initially) greatly exceed the prevailing interest rate, such that equities will grow substantially faster than bonds. Most people will see things like bonds paying 50% annually and notice the stock market more than doubling, and pile into stocks. I don't think the opportunity cost effect will be sufficient to dissuade people here.
+
+Another channel is the discounting of future cash flows, eg higher interest rates means that future payments are worth less than current payments. That's true in a strict valuation sense, but again, you're also needing to price in growth rates in addition to discount rates. Plus in a rapidly growing environment like this, just the very near term payments alone can justify a large valuation, even if you're discounting something 10+ years into the future to basically 0.
+
+habryka
+Will: I think I am failing to properly follow the equities vs bonds tradeoff here. Let me try to summarize what I think you are saying: 
+
+When AGI happens, there might be a lot of growth, so people will want to invest a lot, which means people will want high interest rates on any loans they give out, since they want the interest on those loans to at least match the other investments in returns.
+
+This part makes sense to me. Seems like interest rates in this sense will go up.
+
+But then I think I am failing to understand how this will differentially affect holding stocks vs. holding bonds. 
+
+Cosmos
+But then I think I am failing to understand how this will differentially affect holding stocks vs. holding bonds.
+
+Don't worry, you are not alone in being unclear how interest rates affect stock prices. It seems like there should be a mechanical relationship but it's not at all certain. I was responding to Zvi's point that higher rates might also impact stocks. Ultimately I still expect growth to be so large that will outweigh any drag on stocks due to rates.
+
+Zvi
+Agree with Will that interest rates could rise a lot and that you therefore very much do not want to be holding debt when AI takes off, as existing debt will lose a lot of value if interest rates rise. It is fine to hold things similar to cash to maintain optionality, but you'll want to do this with short-term instruments. This is one place I have actually put effort in - I keep having to explain I want the floating interest rate, that when I say I don't want to take risk with my cash I mean that I am afraid interest rates will go up rather than down.
+
+And to take it one step further, holding long term debt at fixed rates is amazing in that situation, such as a long term mortgage. As a company you would love to have issued bonds, and so on.
+
+For governments, as was famously asked recently, is R>G? If real growth is very high, then it is fine for real interest rates to also be high. Also note that governments only refinance slowly as their bonds mature, so if things are escalating quickly, the interest rates on their debt could be well behind the growth rate even if the rate on new debt exceeds the growth rate, making there be less need to raise more revenue. And we should expect major primary surplus to happen on its own.
+
+Concrete example portfolio
+habryka
+Ok, I think I want to take a bit of a step back and talk a bit more practicalities.
+
+In this post "Investing for a World Transformed by AI" Peter McCluskey has a relatively concrete sets of companies that he thinks will perform well if the world gets transformed by AI. Extracting the most relevant recommendations: 
+
+AI companies: Google, [...] OpenAI,
+
+[...]
+
+My current semiconductor-related investments are (in alphabetic order): AMKR, AOSL, ASML, ASYS, KLAC, MTRN, LSE:SMSN, TRT.
+
+[...]
+
+AMZN, MSFT, and GOOGL are likely to get some benefit from datacenter growth. I guess I'll expand my GOOGL holdings and buy small positions in AMZN and MSFT sometime in 2023, when I see signs that their stock's downward momentum has dissipated.
+
+[...]
+
+My two biggest solar bets are CSIQ, and SCIA. I have smaller positions in JKS, DQ, SEHK:1799.
+
+For power grid infrastructure and solar farm construction, I have positions in MTZ, MYRG, PLPC, and PRIM.
+
+These sure are a lot of stock tickers, so I don't think we should look into each one of those, but I am kind of curious whether you look at this portfolio and it seems vaguely sane to you.
+
+And then I would like to go into a bit more concrete detail about what you would actually concretely do if you wanted to spend at most like 15 hours on this, but still end up with a portfolio that seems like it does the thing.
+
+NoahK
+Habryka's portfolio seems reasonable enough to me. I think omitting TSM is an impactful decision (and not one I agree with) but other than that it looks solid for a list of tickers. 
+
+If I were to make my own list of stocks worth large-ish positions, I'd say TSM, MSFT, GOOG, AMZN, ASML, NVDA are a good starting point. You can also look at energy producers and raw materials mining/refining. Though with those sorts of companies its a more competitive market and it makes sense to diversify more.
+
+Zvi
+That portfolio does not include weightings, and has a bunch of [...] in it, and I don't know what a lot of those companies are or whether they seem cheap, but does not in any way seem insane. I certainly have AMZN/MSFT/GOOGL, although I am not trying to time momentum. Solar seems like a decent place to be for other reasons as well and I have some exposure there, but I haven't investigated the companies named. 
+
+Semiconductors seem like a good idea if one was doing the work and building from scratch. But also one does not need to hedge bets too carefully on exactly which angle of AI will end up being most profitable - it seems reasonable to aim for where you see the best profits, rather than trying to be too smooth.
+
+And yes, NVDA seems cheap. Kind of crazy that it's down substantially from its peak through a strong earnings beat. 
+
+I stay away from TSM due to geopolitical risk, I don't want it even if it's properly priced in.  
+
+NoahK
+To Zvi's point about geopol risk on TSM, TSM is one of the stocks where I am almost entirely call options in my exposure. I think if you are comfortable trading options - and many people aren't which is reasonable - a 31% implied volatility is quite cheap. And there aren't good substitutes for TSM that I am aware of. It plays a pretty unique role in global supply chains I think. 
+
+Zvi
+Yeah, TSM seems like an excellent place to deploy call options if one was willing to use call options.
+
+habryka
+Ok, let's try to dumb things down even more. Let's say you are a 28 year old male with a few tens of k to hundreds of k to invest who does not have any kind of brokerage account set up. What is the actual concrete thing you would do that would not cause you to accidentally press the wrong button and then somehow lose all your money? 
+
+Some links in response to this also seems fine, though I do feel like this step is one where some reasonable people might get stuck.
+
+NoahK
+None of what I said is financial advice but this is: be very careful before clicking any buttons in your brokerage account, and make sure you understand what they do. 
+
+More seriously, people for whom this conversation is a bit technical should avoid trading options or using excessive leverage. It is easy to mess up if you don't really have the knowledge base and aren't paying close attention. 
+
+Cosmos
+And then I would like to go into a bit more concrete detail about what you would actually concretely do if you wanted to spend at most like 15 hours on this, but still end up with a portfolio that seems like it does the thing.
+
+To a first approximation: either go 100% equities, or keep some equities and some cash, with the cash portion invested in short term rates (money market, T-bills, etc) and periodically rebalance.
+
+The maximally agnostic thing is just the global stock index. Vanguard has an ETF with the ticker VT that's just all stocks in the world, market cap weighted. Global equities have underperformed US equities for a long time (and we have a lot of tech here), so if you're a growth instead of a value investor then maybe you want a US total index (VTI) or just the S&P 500 large cap index (SPY).
+
+The next layer is to spend some time thinking about which areas are likely to outperform in the immediate term. I recommend going long-only, not trying to short any particular areas, given the likely expected increase in growth and uncertainty about where such gains might appear. I mentioned raw materials above, you can get a global raw materials ETF with MXI, or US-only raw materials with IYM. Semiconductors also seems like another clear buy, given what we've already observed (though it may now be overvalued and the value will be captured elsewhere after this wave!), and the ticker SMH is a broad semiconductor ETF. You can go down the list on whatever you're bullish on and find an ETF for that subsector, almost all of them have one, eg for solar you can buy TAN. (Note that these are just common symbols, you might want some other variant on these funds, I'm not specifically recommending these)
+
+It seems very very risky to invest in individual names, unless you're monitoring this very closely...
+
+NoahK
+@habryka I would tell such a person to be between 50-100% equities, mostly indices with a small special allocation to MSFT, and to short long dated bonds if they feel comfortable doing so. If they don't, then hold whatever they don't invest in cash/tbills. 
+
+And get a mortgage if they live in Wisconsin or some such place. And don't go to grad school. 
+
+NoahK
+Another benefit of call options btw is that you lock in the interest rate. If you are getting your leverage by spot borrowing you need to pay attention to the rate your broker charges cuz it could go up a lot. 
+
+Zvi
+Yeah, let me echo NoahK: All this talk of options needs to take into account that it is VERY easy to click the wrong buttons, to size things 10x or 100x what you thought you were doing, or otherwise get into big trouble, if you wade into options or futures or other things like that. Be sure you know EXACTLY what you are doing, talk to a human to confirm as needed, and so on, and when in doubt stick to the basics.
+
+Cosmos
+More seriously, people for whom this conversation is a bit technical should avoid trading options or using excessive leverage.
+
+To briefly address leverage: this could get very crazy in a high rates environment. Leverage is financed via margin loans, and those are almost always the shortest term interest rate + some premium. So if interest rates are already at 50% or something, you're bleeding half your value every year using 2x margin. This is great of course if the stock market is soaring, but generally stocks don't only move in one direction, and you could get fully wiped out from a combination of high rates and sidewise to suddenly sharp downwards action. For just one concrete scenario: suppose there's a new AI-driven trading bot (or a million of them) and we get a flash crash of 75% instantly or something. Everyone doing this will not just be liquidated but also in deep debt to their brokerage. I think leverage is an excellent strategy only in "relatively normal" states of the world.
+
+habryka
+Hmm, so I feel like this advice is too conservative. Like, I at least seem to have some beliefs about how big of a deal AI will be that disagrees pretty heavily with what the market beliefs (I think, though this kind of stuff is hard to tell). I feel like I would want to make a somewhat concentrated bet on those beliefs with like 20%-40% of my portfolio or so, and I feel like I am not going to get that by just holding some very broad index funds, which really are the "defer to the market maximally" option.
+
+NoahK
+I like "short bonds and make idiosyncratic investments in MSFT, GOOG, NVDA, etc". It depends on how much risk the 28 year old wants. 
+
+Cosmos
+I like "short bonds and make idiosyncratic investments in MSFT, GOOG, NVDA, etc".
+
+Short bonds is a great strategy when you're in the state of the world where the takeoff is already occurring and everyone realizes it and both growth and rates are skyrocketing already. Personally, I would not be short bonds right now in the current environment, but of course YMMV
+
+habryka
+Ideally there would exist an AI index fund or something I could buy that balances things out for me, but I think that doesn't exist? And I also don't mind taking on some risk. Seems fine for that part of my portfolio to go to close to zero in like 50% of worlds, if it properly captures the upside in the other worlds.
+
+Zvi
+My big difference with Will is that I'm unafraid to buy individual stocks, which also gives you additional tax-related optionality in many cases. You don't want too much concentration into any one stock, but a 28-year-old doesn't/shouldn't have a level of risk aversion where e.g. being 10% GOOG seems unreasonable, and certainly 5% is fine, if you think that is where the value lies. 
+
+At minimum, if you expect major changes from AI, you're going to want to be overweight AI-linked stuff, at some level of magnitude and obviousness. If nothing else there are sector ETFs for such things, but mostly the stocks are obvious and I'd look at those. Again, small mistakes here really are fine in expectation.
+
+Shorting bonds is again a more advanced move. It does seem like if the premium to do it isn't too big it would have alpha, but it can definitely backfire - interest rates dropping for a few years before they rise does not seem so unlikely to me. The worst case scenario is you lose money by being too early, then you're right later but you have no capital to profit from being right later.
+
+NoahK
+I think the yield curve right now is flat and it will be upward sloping before we're done with everything. And I don't think Powell can cut rates. But this gets far afield of AI. 
+
+Probably the best risk adjusted trade imo is to like long 10 year bonds and short 20 year bonds in no more than a 2:1 ratio. 
+
+Cosmos
+Ideally there would exist an AI index fund or something I could buy that balances things out for me, but I think that doesn't exist?
+
+Oh they definitely exist! Don't underestimate the marketing power of these big fund managers lol
+
+iShares has one under ticket IRBO. Let's see what it holds... Looks like very low concentration (all <2%) but the top names are... Faraday, Meitu, Alchip, Splunk, Microstrategy. (???)
+
+habryka
+Very quick question: What brokerage thing do you actually someone like me should use?
+
+NoahK
+Interactive Brokers is the best brokerage if you know what you are doing. They have terrible UI but the best margin rates. Other brokers will rip your face off when you borrow cash. 
+
+If you don't want to learn to use terrible UI, you can use Fidelity or Schwab or something I hear. 
+
+habryka
+They have terrible UI but the best margin rates.
+
+Lol, I feel like that is the wrong tradeoff to make when I am worried that I will lose all my money by pressing the wrong button.
+
+Cosmos
+My big difference with Will is that I'm unafraid to buy individual stocks
+
+I'm open to buying individual stocks, but it's very difficult for me to recommend specific stocks to other people under extreme uncertainty! How can an average investor with <15 hours of research as Oliver stipulated know they're doing anything with positive expected value over buying a broad index? Anything that's a mega-winner will in fact get captured by a broad index fund.
+
+I do think it's fine for younger more risk seeking people with time on their hands to give this some thought and pick individual stocks. If nothing else you will learn a lot by doing this, both about markets and about your psychology, and it can incentivize you to learn more about the companies in question once you have skin in the game. That said, I would never let your index fund exposure go to 0 in favor of individual stocks, just to avoid the risk of ruin that you captured none of the eventual winners.
+
+To be very clear: I'm not even certain that most/all value will be captured by a single megacorporation. It could be that several thousand companies each generate a trillion dollars in value or something.
+
+habryka
+(As a quick anecdote here, a while ago I tried to figure out what would happen if you just blindly followed all stock-advice that was upvoted on LessWrong. So I set up a virtual trading portfolio on some random website I found and maintained it for a few months. One of the biggest positions I took out was to short Nikola based on some upvoted post at the time. Within a few months that position had grown to 60%+ of my portfolio as the shorting had gone quite well and had appreciated like 300% or so.
+
+Then I stopped checking for 2 months, and then when I checked in again, suddenly that whole investment went to 0...
+
+Turns out the virtual portfolio website didn't execute your options automatically even if they were in the green, so they had expired and become worthless. 
+
+This is one reason why I am afraid of clicking a wrong button and losing all of my money)
+
+NoahK
+Oh no that is quite unfortunate! Yes if you buy options I recommend setting an alert when you buy them that will go off like a week before expiry. 
+
+Zvi
+On individual stocks, I think that especially if you know the companies in question but also in general, you don't need 15 hours on each company to know that it is likely a real company making real things with good prospects at a reasonable price or P/E, and if you bought index funds you'd be buying that stock anyway. As long as you don't go too big on any one stock that way, it seems... fine. I've never spent 15 hours looking at a stock ever.
+
+Is any of this ethical or sanity-promoting?
+habryka
+Ok, I think I would like to cover another topic that is related, which is something like: "Ok, but is investing in this way ethical? Also, will it mess up your ability to think sanely about this stuff and try to slow down AI when that will directly hurt your bottom line?"
+
+habryka
+Like, I've been trying to convince some of my friends working at AGI companies to somehow get rid of their equity position, since I do think at that level of exposure it pretty seriously messes with your ability to think clearly (not as much as the social environment of the AGI company, but I think still a good amount). 
+
+I think holding Google or Nvidia with a huge fraction of your portfolio probably has similar effects, though my guess is as you get more diffuse than that, the effects get weaker. But like, many people I know are actively advocating for pretty aggressive government interventions that does feel like the kind of thing that could seriously hurt returns, and there might be surprisingly large effects here, even at a pretty broad level. 
+
+NoahK
+I think for the vast majority of investors, your portfolio choices don't impact the world in any meaningful way. (Though they may impact how you think about things and evaluate risk.)
+
+If you are a billionaire, yes, I would encourage you to consider social welfare aspects of your AI investments. It would be good if these companies faced higher costs of capital, and buying a stock serves to lower the cost of capital of the company you purchase. But if you are a 28 year old tech worker do what you must to protect yourself, imo. The capacity to harm the world through your investments is quite limited at that level. 
+
+Cosmos
+Ok, but is investing in this way ethical?
+
+I agree it seems more questionable if you're, say, giving the seed investment to a new AGI startup that's all capabilities and disdains any idea of safety. But one thing that's nice about my index fund approach here is that you can benefit from the downstream economic gains, without favoring any particular actor.
+
+There is also a very loose, not zero, connection between investing in the secondary market (buying existing stocks, not companies issuing new stock to raise money) and how that flows through to advancing a corporation's interests. If a company is regularly issuing stock to finance their activities, then yes, if you raise their stock price on the margin then they can finance themselves more than if they have a low stock price. But what about companies who haven't issued new equity since the IPO? Does them having a high stock price make their company run better/faster towards AGI? That seems very tentative. I guess there's a channel by which you're making it more profitable for individual employees with lots of talent to go work there, when they're paid largely in stock options instead of cash?
+
+Cosmos
+But what about companies who haven't issued new equity since the IPO?
+
+To play the devil's advocate here for a second: most big tech companies working on AI do in fact issue new equity annually, not to sell to investors, but as equity compensation for employees. This can actually amount to several %/year for many of those companies, which is quite dilutive over the long run! So yes, equity price can matter when you're at a company that's giving you the majority of your expected comp in options.
+
+habryka
+I guess there's a channel by which you're making it more profitable for individual employees with lots of talent to go work there, when they're paid largely in stock options instead of cash?
+
+Yeah, I feel a bit confused about the relationship here. I guess I kind of feel like the cost of raising capital of any kind should be roughly tracked by the stock price?
+
+But also, yeah, it does just make it cheaper for them to hire people. For most tech companies their stock compensation package is like 50% of their salaries, and most of their expenses are salaries, so that should pretty directly equate more capital. 
+
+Zvi
+Ok, but is investing in this way ethical?
+
+It depends on the details, but typically I would say yes. There are exceptions. If you are investing in private companies or where you can impact cost of capital in a meaningful way, like OpenAI or Anthropic, then I would say investing there has ethical concerns. 
+
+But Microsoft and Google are not like that. They already have infinite war chests and are not going to be spending more or less money on AI based on your investment. Nor is Nvidia going to do anything but maximize along its capacity and scaling constraints, money isn't a factor. I think buying such stocks is fine. 
+
+Even when they issue stock options, they are going to scale to the price, and your impact is rather minimal all around. I think you can safely ignore such factors. Assume they have infinite war chest size when it comes to hiring, and salaries and compensation are constrained only by social forces.
+
+If you are worried, you can go case by case - when you invest in Solar companies you are plausibly helping them in a real way, which is potentially bad for AI on the margin but also good for other reasons (e.g. climate and general goodness).
+
+The impact on your incentives is distinct. I don't worry about this at all, because I know that it is at best a small hedge of my real exposures and it won't change anything. For someone with big exposure to private stock in OpenAI, there could be a problem there.
+
+How would you actually use a ton of money to help with AGI going well?
+habryka
+Ok, this is kind of a tangent from the core topic, but it also feels important. 
+
+So let's say that there are a bunch of people concerned about existential risk, who invest well in the run-up to AGI, and now they have a few hundred billion dollars or so in-aggregate. 
+
+Assuming that it's hard to use money to make more AI Alignment progress, is there any way you could use that money to slow down AGI companies or something like that? Like, I do think a major question for me in this investment situation is whether I actually have use for a giant pile of money when AGI happens.
+
+NoahK
+If you can drive up the price of the factors of production, you might be able to slow progress. Maybe a consortium of bidders could make some rare earth metals more expensive? Idk about the technical details. 
+
+I would not short high growth AI stocks to drive up their cost of capital since you'll just get blown out quickly. 
+
+Cosmos
+Assuming that it's hard to use money to make more AI Alignment progress, is there any way you could use that money to slow down AGI companies or something like that?
+
+One strategy that has been discussed is to pay top talent to not make AGI. If you've truly outperformed the market, you should be able to pay above-market rates to researchers and developers.
+
+That said, I expect the motivations of folks working on this stuff to be only partly monetary, and if they're already individually wealthy and have satisficed on the major life stuff, they might just keep working on it for glory or whatever other motivation, so I suspect this will be less successful than people presume.
+
+NoahK
+Thinking about it more, the best strategy might be to donate to politicians who are already sympathetic. The government has guns and stuff and is good at stopping people from doing things. And donations can make a difference to policy. 
+
+Cosmos
+If you can drive up the price of the factors of production, you might be able to slow progress. 
+
+Yes this is the generalization of my suggestion about buying up the top talent. Anywhere a resource constraint exists, you could in theory pay extra in order to sequester that resource.
+
+Of course, once you do that, and the price rises, you've incentivized the market to find new and cheaper ways to bring more supply online. So I think that this strategy at best slows things down in the short term, and possibly speeds them up in the long term. But if you think the only thing that matters/exists is the short term, then it's certainly one tool in the toolkit...
+
+Zvi
+Lobbying the government, backing candidates, public advocacy or other things in such categories are obvious options where you could spend quite a lot. That would be where my first move would be. Politics always feels icky but ultimately is not something one can ignore.
+
+Buying up top talent also seems like a great move if you can target it well, and presumably you can also put that talent to some good use (alignment, or if not then something else, top talent is almost always cheap even when it's expensive). 
+
+habryka
+Yeah, I do feel kind of icky about the lobbying point. It feels pretty symmetric in that it's been a way in which historically people have prevented tons of good stuff from happening in a way that didn't really expose them to accountability (regulatory capture being the more common path, but also all kinds of dumb safety regulations).
+
+Cosmos
+I just want to point out that we didn't even mention crypto once :)
+
+Please diversify your crypto portfolio
+habryka
+Talking about crypto, via historical circumstance I sure have a lot of friends who are holding a really quite substantial fraction of their portfolio in cryptocurrency. I am actually interested in a quick digression on what you expect to happen to crypto prices if AGI takes off (at least in parts because I often wish my surrounding ecosystem was betting making a less concentrated bet on crypto and this particular domain might sway some people who otherwise have been pretty steadfast in their hodling).
+
+Cosmos
+Just to make the briefest possible case: does cryptocurrency/blockchains solve a specific problem that future AGIs are likely to have? I think there's actually a good chance that AIs can utilize these features way better/more easily than humans can. Digital representation of scarcity could be highly valuable. Also automatically-enforceable smart contracts might end up as a primary means of coordination between AIs. :)
+
+Cosmos
+Note that the strongest case against cryptocurrency here (other than that it has no value or use at all) is that holding non-yielding or low-yielding assets suffers extreme opportunity cost in a world of very high real rates. For example, gold tends to trade inversely to real interest rates (higher rate -> lower price). So bitcoin in particular could have major issues in that regard. Ethereum or another more flexible system could potentially do something like raise the staking yield or something to try to keep up with interest rates (though of course that's dilutive to current holders). Basically you're relying on use cases providing major value at the point of AGI takeoff...
+
+NoahK
+So my basic take is that anyone holding a lot of crypto as a % of their wealth, but not so much that they'd face liquidity issues in selling, is doing something very wrong. This is not to say people shouldn't own BTC or ETH or whatever. Some crypto is fine. 
+
+But basic portfolio theory suggests that if you have an extremely large % of your portfolio in an asset with extremely high idiosyncratic volatility, you can get better returns by diversifying (and then using more leverage if you want). 
+
+I'm not against owning crypto but 50%+ allocation to ETH - which I think you mentioned - would be very suboptimal for almost anyone.
+
+Cosmos
+Thanks Oliver for having me in the dialogue! I need to drop off now, but I'm honored to have been asked to participate, and this was a lot of fun and very thought provoking! Great talking to you Zvi and Noah, and I'm looking forward to future dialogues!
+
+habryka
+Thank you Will! Really appreciated your thoughts here!
+
+NoahK
+I've got to run now as well but thank you for inviting me! It was great chatting with everyone. 
+
+habryka
+Thank your joining Noah!
+
+Should you buy private equity into AI companies?
+habryka
+So, as we've noted it's pretty hard to buy stock that's actually loaded on AGI companies, since most companies working directly on this stuff are either private (OpenAI, Anthropic) or are part of a giant tech company that mostly does non-AI stuff (Microsoft, Google).
+
+So a thing one might try to do is to get access to the private equity. For example, by buying it off of employees who have been there for a while. 
+
+Does this seem like a good idea from a financial perspective? Also, the incentives question here does seem more pronounced than for the other things we've been talking about.
+
+Zvi
+It seems likely that private equity in e.g. OpenAI or Anthropic would trade cheap to the extent that it traded privately, so the concern here is ethical rather than financial. At which point, it depends who you buy it from, what incentives you are changing in what places, and whether or not you can serve a 'dead on the cap table' purpose without too much driving up the price. I don't know enough to know the answers for sure, but until I had a better idea I would try and stay away.
+
+habryka
+Yeah, that does also feel right to me. I have been thinking about setting up some fund that maybe buys up a bunch of the equity that's held by safety researchers, so that the safety researchers don't have to also blow up their financial portfolio when they press the stop button or do some whistleblowing or whatever, and that does seem pretty incentive wise. 
+
+I do think sadly companies often have explicit agreements with employees that prevent them from hedging their equity positions, so this might be hard.
+
+Summarizing takeaways
+habryka
+Ok, I feel like after participating in this, I feel like I at least have a decent handle on constructing some kind of portfolio here.
+
+I will think about this for a few days, but I feel like if I was implementing the advice here, I would roughly: 
+
+Go and make a brokerage account with Schwab or Fidelity (whichever seems less annoying to set up)
+Invest like 50% of my portfolio into pretty broad index funds with really no particular specialization
+Take like 20% of my portfolio and throw it into some more tech/AI focused index fund. Maybe look around for something that covers some of the companies listed here on the brokerage interface that is presented to me (probably do a bit more research here)
+Invest like 3-5% of my portfolio into each of Nvidia, TSMC, Microsoft, Google, ASML and Amazon
+Take like 2-5% of my portfolio and use it to buy some options (probably some long-term call options on some of the stocks above), making really sure I buy ones that have limited downside, and see whether I can successfully not blow up that part of my portfolio for like 2 years before I do any more here
+And then I probably wouldn't bother much with rebalancing and basically forget about it unless I feel like paying much extra attention.

@@ -2,9 +2,38 @@
 
 I choose to begin work early, so I can enjoy sunlight hours afterwards. However, I encountered an issue - every morning, I'm accosted by co-workers wanting to small talk about the weather and the winds. Despite my prior verbiage, I do want to talk to my coworkers in the morning, just not about that. Furthermore, when it's time for my response, I'm usually too tired to come up with answers that jolt people out of their rhythm and inspire thought provoking conversation. In other words, I'm a part of the problem. This repo is dedicated to developing a daily tool to warm up your cognitive abilities, speech patterns, and provide a jump-off point for interesting conversation.
 
-This app will produce a "cognitive warmup" according to a cron schedule, likely once every day. Generated content will consist of various questions, possibly including fermi questions, soft-skill probing questions, interview-like questions, questions about documents uploaded to source folder. It will also include some related content to consume, likely scraped from the html sources included in this list, and related to personal documents uploaded. The Minimum Viable Product (MVP) will be text-based, providing content as a document. Then, an interactive speech-based tool will be developed to improve interactivity.
+This app will produce a "cognitive warmup" according to a cron schedule, likely once every day. Generated content will consist of various questions, possibly including fermi questions, soft-skill probing questions, interview-like questions, questions about documents uploaded to source folder. It will also include some related content to consume, likely scraped from the html sources included in this list, and related to personal documents uploaded.
 
-# Example MVP Generated Content (Real):
+# Current Status (02/02/2025)
+ - Python Generator
+  - Functions well, limited to text content.
+  - ToDo: Increase supported input modality to html sources, etc.
+  - ToDo: Related to ^, scrape daily content from sources and add to source list.
+ - Ephemeral Server
+  - Basic functionality to mint tokens for client.
+  - Functions well for local hosting.
+ - Web UI
+  - Works well, enabling comms with realtime api, based off of generated content.
+  - ToDo: Add favicon.
+  - ToDo: Support logic for 0-1 input files (including frontend) / handling this edge case.
+ - End-To-End System
+  - Functions well, executable from a docker compose command which generates content and spins up everything.
+  - ToDo: Update Jenkinsfiles to support current formats.
+  - ToDo: Add health checks / completion check for generator and ephemeral server.
+  - ToDo: Set cronjob to generate content every morning.
+
+# Overview of system / future
+
+## System MVP
+ - Load txt files from `./source` folder
+ - Merge content in a `Content` object
+ - Using `Content` object, generate various desirables
+ - Return generated content to generated folder
+ - Start web app
+ - Load generated content as iterable
+ - Produce web server with ui enabling content consumption
+
+## Example MVP Generated Content (Real):
 ```
 **Fermi Question:**
 
@@ -23,15 +52,6 @@ Please calculate the total number of synapses and the total number of signals tr
   - Philisophical questions - perhaps epistemological
  - Questions referring to recent consumed academic works - likely learned from scanning ones Obsidian Vault
  - Questions related to works in provided newsletters, or listed websites (LessWrong)
-
-## System MVP
- - Load txt files from `./source` folder
- - Merge content in a `Content` object
- - Using `Content` object, generate various desirables
- - Return generated content to generated folder
- - Start web app
- - Load generated content as iterable
- - Produce web server with ui enabling content consumption
 
 ## Full System Goal
 
@@ -55,6 +75,8 @@ Please calculate the total number of synapses and the total number of signals tr
 Only the OpenAI key is strictly necessary. Secrets are loaded from environment variables, which must be set with e.g.
 
 `export OPENAI_API_KEY=<INSERT_OPENAI_KEY_HERE>`
+
+Currently, can be executed with `docker compose up`.
 
 ## Project Links (For personal development, not public access)
  - https://platform.openai.com/settings/organization/usage

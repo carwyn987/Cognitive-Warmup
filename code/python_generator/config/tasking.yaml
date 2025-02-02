@@ -7,4 +7,13 @@ fermi_question:
    model: 'gpt-4o-mini'
    temperature: 1.0
    enabled: true
-   
+
+basic_reasoning_question:
+   description: "Generate a basic reasoning question inspired by the relevant content"
+   command: 'Generate a basic reasoning question inspired by the following content. Base the question off of well known reasoning questions like "If all A are B, and all B are C, then are all A C?". Do not give the answer or method!'
+   generator: combine_with_context
+   role: 'system'
+   role_content: 'You are a highly creative scientist, engineer, and coder.'
+   model: 'gpt-4o-mini'
+   temperature: 1.0
+   enabled: true

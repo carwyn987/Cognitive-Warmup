@@ -21,7 +21,7 @@ for root, dirs, files in os.walk(args.source_dir):
     for file in files:
         myfiles.append(File(os.path.join(root, file)))
 merged_files = MergedFiles(myfiles)
-print(merged_files.content)
+# print(merged_files.content)
 
 # Load config file
 with open(args.config_file, 'r') as file:
@@ -42,7 +42,7 @@ for task in config_tasks:
     print(f'Generating content for task: "{task}"')
     print("temp: ", temperature, type(temperature))
 
-    prompt = PromptGenerator("combine_with_context", config[task]['command'], merged_files.content).get_prompt()
+    prompt = PromptGenerator("combine_with_context", config[task]['command'], merged_files.get_content()).get_prompt()
     print("PROMPT: ", prompt)
     response = openai_text_request(api_key=secrets.openai, question_content=prompt, model=model, role_content=role_content, temperature=temperature)
     print("RESPONSE: ", response)
